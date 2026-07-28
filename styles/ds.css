@@ -323,10 +323,24 @@ html,body{overflow-x:hidden; max-width:100%;}
 .phone-mock .notch{position:absolute; top:12px; inset-inline-start:50%; transform:translateX(-50%);
   width:66px; height:7px; border-radius:6px; background:#2a2e35; z-index:2;}
 .phone-mock .screen{position:absolute; inset:9px; border-radius:29px; background:var(--surface-2); overflow:hidden; display:flex; flex-direction:column;}
-.phone-mock .pm-top{background:var(--surface); padding:24px 14px 12px; border-bottom:1px solid var(--line);
-  display:flex; align-items:center; gap:8px; font-weight:700; font-size:13px; color:var(--ink);}
-.phone-mock .pm-top img{width:20px; height:20px; filter:grayscale(1) brightness(.18);}
+.phone-mock .pm-top{background:var(--surface); padding:22px 14px 12px; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:9px; font-weight:700; font-size:14px; color:var(--ink);}
+.phone-mock .pm-top img{width:30px; height:30px; filter:grayscale(1) brightness(.18);}
 .phone-mock .pm-body{padding:12px; display:flex; flex-direction:column; gap:10px; flex:1;}
 .phone-mock .pm-card{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:11px; font-size:11.5px; color:var(--ink);}
 .phone-mock .pm-card .lab{font-size:9.5px; color:var(--muted); display:block; margin-bottom:3px;}
 .phone-mock .pm-btn{background:var(--action); color:#fff; text-align:center; border-radius:9px; padding:11px; font-size:12px; font-weight:700;}
+/* bigger brand splash inside the phone (Cairo Scan logo) */
+.phone-mock .pm-brand{display:flex; flex-direction:column; align-items:center; gap:6px; padding:14px 0 4px;}
+.phone-mock .pm-brand img{width:52px; height:52px; filter:grayscale(1) brightness(.18);}
+.phone-mock .pm-brand b{font-size:13px; color:var(--ink);}
+
+/* floating WhatsApp button (utility colour — desktop; mobile uses the sticky CTA) */
+.wa-float{position:fixed; inset-block-end:22px; inset-inline-end:22px; z-index:85;
+  width:58px; height:58px; border-radius:50%; background:#25D366;
+  display:flex; align-items:center; justify-content:center; text-decoration:none;
+  box-shadow:0 12px 28px -8px rgba(37,211,102,.65);}
+.wa-float:hover{filter:brightness(1.06); transform:translateY(-1px);}
+.wa-float svg{width:32px; height:32px;}
+@media (max-width:959px){ .wa-float{display:none;} }
+@media print{ .wa-float{display:none;} }
