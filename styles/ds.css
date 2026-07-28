@@ -312,3 +312,21 @@ h2{font-size:26px;}
 
 /* safety: never let the page scroll sideways */
 html,body{overflow-x:hidden; max-width:100%;}
+
+/* app promo band (graduated colour — distinct from the flat-dark footer) */
+.appband{background:linear-gradient(135deg,#3b414b 0%, #2b2f37 55%, #23262d 100%); position:relative; overflow:hidden;}
+.footer--mega{border-top:1px solid rgba(255,255,255,.07);}
+
+/* phone mock-up — communicates "this section is about the mobile app" */
+.phone-mock{width:208px; height:428px; flex:none; margin-inline:auto; position:relative;
+  border:9px solid #2a2e35; border-radius:38px; background:#0e1013; box-shadow:0 28px 60px -22px rgba(0,0,0,.7);}
+.phone-mock .notch{position:absolute; top:12px; inset-inline-start:50%; transform:translateX(-50%);
+  width:66px; height:7px; border-radius:6px; background:#2a2e35; z-index:2;}
+.phone-mock .screen{position:absolute; inset:9px; border-radius:29px; background:var(--surface-2); overflow:hidden; display:flex; flex-direction:column;}
+.phone-mock .pm-top{background:var(--surface); padding:24px 14px 12px; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:8px; font-weight:700; font-size:13px; color:var(--ink);}
+.phone-mock .pm-top img{width:20px; height:20px; filter:grayscale(1) brightness(.18);}
+.phone-mock .pm-body{padding:12px; display:flex; flex-direction:column; gap:10px; flex:1;}
+.phone-mock .pm-card{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:11px; font-size:11.5px; color:var(--ink);}
+.phone-mock .pm-card .lab{font-size:9.5px; color:var(--muted); display:block; margin-bottom:3px;}
+.phone-mock .pm-btn{background:var(--action); color:#fff; text-align:center; border-radius:9px; padding:11px; font-size:12px; font-weight:700;}
