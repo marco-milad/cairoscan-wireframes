@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cairo Scan — Public Website Wireframes</title>
+<link rel="stylesheet" href="wireframe-kit.css">
+</head>
+<body>
+
+<header class="wf-header">
+  <div class="inner">
+    <p class="wf-eyebrow">A · الموقع العام · Public Website</p>
+    <h1>شاشات الموقع العام</h1>
+    <p class="sub">قوالب أساسية بـ wireframes كاملة + مواصفات المحتوى لباقي الصفحات — المحتوى مأخوذ من <span class="ltr">RFP §4 (Content Specs)</span>.</p>
+    <div class="pill-row">
+      <span class="pill">Screens: <b>P01–P26</b></span>
+      <span class="pill">Journey: <b>Patient (entry) + all public</b></span>
+      <span class="pill"><span class="badge live">LIVE</span> يُبنى في هذا الـ Tranche</span>
+    </div>
+  </div>
+</header>
+
+<nav class="wf-nav"><div class="inner">
+  <a class="home" href="index.html">◆ Index</a>
+  <a href="#P01">Home</a><a href="#P09">فئة خدمة</a><a href="#P10">فحص</a>
+  <a href="#P12">فرع</a><a href="#P13">للمرضى</a><a href="#P16">التأمين</a><a href="#P24">اتصل بنا</a>
+  <a href="02-patient-booking.html">← حجز المريض</a>
+</div></nav>
+
+<main>
+
+  <!-- ===================== P01 HOME ===================== -->
+  <section class="screen" id="P01">
+    <div class="screen-head"><span class="screen-id">P01</span>
+      <span class="screen-name">الصفحة الرئيسية<span class="en">Home</span></span>
+      <span class="badge live">LIVE</span><span class="screen-flow">مدخل رحلة المريض → الحجز</span></div>
+    <div class="screen-body">
+      <p class="device-label">Desktop 1440 · Arabic RTL</p>
+
+      <div class="wf-topbar">
+        <span class="wf-logo">CAIRO SCAN</span>
+        <span class="navlink">من نحن</span><span class="navlink">خدماتنا</span><span class="navlink">للمرضى</span>
+        <span class="navlink">المكتبة الصحية</span><span class="navlink">الشركات</span><span class="navlink">الفروع</span><span class="navlink">اتصل بنا</span>
+        <span class="spacer"></span>
+        <span class="btn" style="padding:5px 10px">AR / EN</span>
+        <span class="btn primary" style="padding:5px 12px">احجز موعد</span>
+      </div>
+
+      <div class="wf-hero" style="margin-top:10px">
+        <span class="tag">HERO — video / banner</span>
+        <h3>شبكة مصر الرائدة للأشعة التشخيصية والتحاليل</h3>
+        <p>سرعة ودقة و+40 سنة ثقة في خدمة المرضى.</p>
+        <div class="btn-row" style="justify-content:center">
+          <span class="btn primary">احجز موعد <span class="ltr">(Book)</span></span>
+          <span class="btn">عرض نتائجي <span class="ltr">(View Results)</span></span>
+        </div>
+        <div class="grid g4" style="margin-top:16px">
+          <div class="stat"><b>+40</b><span>سنة تميّز</span></div>
+          <div class="stat"><b>18</b><span>فرع</span></div>
+          <div class="stat"><b>+1000</b><span>متخصص</span></div>
+          <div class="stat"><b>🇩🇪</b><span>معامل معتمدة ألمانيًا</span></div>
+        </div>
+      </div>
+
+      <div class="wf" style="margin-top:12px">
+        <span class="tag">Services overview — 7 categories</span>
+        <div class="grid g7">
+          <div class="imgph">MRI</div><div class="imgph">CT</div><div class="imgph">طب نووي</div>
+          <div class="imgph">أشعة النساء</div><div class="imgph">سونار</div><div class="imgph">أشعة عادية</div><div class="imgph">معامل</div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:12px">
+        <div class="wf">
+          <span class="tag">لماذا كايرو سكان؟</span>
+          <ul class="clist">
+            <li>معامل معتمدة ألمانيًا</li><li>أكبر شبكة تأمين في مصر</li>
+            <li>نتائج خلال 24 ساعة</li><li>خدمات منزلية</li>
+          </ul>
+        </div>
+        <div class="wf">
+          <span class="tag">Statistics bar</span>
+          <div class="grid g2">
+            <div class="stat"><b>#</b><span>مرضى سنويًا</span></div>
+            <div class="stat"><b>#</b><span>فحوصات سنويًا</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wf" style="margin-top:12px">
+        <span class="tag">Featured Screening Programs — scroll row</span>
+        <div class="grid g3">
+          <div class="imgph">رعاية القلب</div><div class="imgph">سرطان الثدي</div><div class="imgph">فحص المرأة</div>
+        </div>
+      </div>
+
+      <div class="wf" style="margin-top:12px">
+        <span class="tag">How It Works — 3 steps</span>
+        <div class="grid g3">
+          <div class="stat"><b>1</b><span>احجز</span></div>
+          <div class="stat"><b>2</b><span>زُر الفرع</span></div>
+          <div class="stat"><b>3</b><span>استلم النتائج</span></div>
+        </div>
+      </div>
+
+      <div class="wf" style="margin-top:12px;border-color:var(--red)">
+        <span class="tag" style="background:var(--red-tint-2);color:var(--red-dark)">Booking widget — inline (→ B01)</span>
+        <div class="grid g4">
+          <div class="field"><span class="lbl">الخدمة</span>اختر الفحص</div>
+          <div class="field"><span class="lbl">الفرع</span>اختر الفرع</div>
+          <div class="field"><span class="lbl">التاريخ</span>اختر التاريخ</div>
+          <div class="field"><span class="lbl">الموبايل</span>01xxxxxxxxx</div>
+        </div>
+        <div class="btn-row"><span class="btn primary">ابدأ الحجز</span></div>
+      </div>
+
+      <div class="row" style="margin-top:12px">
+        <div class="wf"><span class="tag">Testimonials</span><div class="line w70"></div><div class="line w50"></div><p style="font-size:12px;color:var(--muted);margin:6px 0 0">تقييم 4.8/5 من +10,000 مريض</p></div>
+        <div class="wf"><span class="tag">News &amp; Health Tips</span><div class="grid g3"><div class="imgph" style="min-height:44px">مقال</div><div class="imgph" style="min-height:44px">مقال</div><div class="imgph" style="min-height:44px">مقال</div></div></div>
+      </div>
+
+      <div class="wf" style="margin-top:12px">
+        <span class="tag">Branch Locator preview — map (→ P11)</span>
+        <div class="imgph" style="min-height:120px">🗺️ خريطة تفاعلية — أقرب 3 فروع (تحديد الموقع تلقائيًا)</div>
+        <div class="btn-row"><span class="btn">اعثر على أقرب فرع</span></div>
+      </div>
+
+      <div class="wf" style="margin-top:12px"><span class="tag">Insurance band</span>
+        <p style="margin:0 0 8px;font-size:13px">نقبل أكثر من 200 شركة تأمين</p>
+        <div class="grid g7">
+          <div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div>
+        </div>
+      </div>
+
+      <div class="wf" style="margin-top:12px"><span class="tag">Footer + App download</span>
+        <div class="row"><div class="line w85"></div><div class="btn ghost">App Store</div><div class="btn ghost">Google Play</div></div>
+      </div>
+
+      <div class="annot"><b>الغرض:</b> واجهة تحويل عالية — تُبرز الحجم والمصداقية وسهولة الحجز. الـ CTA الأساسي "احجز موعد" يدخل رحلة الحجز <span class="ltr">(B01)</span>. <b>RFP §4.1.</b></div>
+    </div>
+  </section>
+
+  <!-- ===================== P09 SERVICE CATEGORY ===================== -->
+  <section class="screen" id="P09">
+    <div class="screen-head"><span class="screen-id">P09</span>
+      <span class="screen-name">فئة خدمة — مثال MRI<span class="en">Service Category</span></span>
+      <span class="badge live">LIVE</span><span class="screen-flow">اكتشاف الخدمة → صفحة الفحص</span></div>
+    <div class="screen-body">
+      <p class="device-label">Template — يتكرر لكل فئة (MRI · CT · طب نووي · أشعة النساء · سونار · أشعة عادية · معامل · منزلية · فحوصات)</p>
+      <div class="wf"><span class="tag">Breadcrumb</span><div class="line w40"></div></div>
+      <div class="wf-hero" style="margin-top:10px"><h3>الرنين المغناطيسي (MRI)</h3><p>شرح مبسّط للفئة + دواعي الاستخدام العامة.</p></div>
+      <div class="wf" style="margin-top:12px"><span class="tag">قائمة الفحوصات داخل الفئة (روابط → P10)</span>
+        <div class="grid g3">
+          <div class="imgph" style="min-height:40px">MRI للمخ</div><div class="imgph" style="min-height:40px">MRI للعمود الفقري</div><div class="imgph" style="min-height:40px">MRI للثدي</div>
+          <div class="imgph" style="min-height:40px">MRI للقلب</div><div class="imgph" style="min-height:40px">MRI للبطن والحوض</div><div class="imgph" style="min-height:40px">MRCP</div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn primary">احجز فحص MRI</span></div>
+      <div class="annot"><b>ملاحظة:</b> كل فئة لها صفحة جامعة + صفحات فحوصات فردية. <b>RFP §4.3.</b></div>
+    </div>
+  </section>
+
+  <!-- ===================== P10 EXAM PAGE ===================== -->
+  <section class="screen" id="P10">
+    <div class="screen-head"><span class="screen-id">P10</span>
+      <span class="screen-name">صفحة فحص (قالب SEO)<span class="en">Exam Page</span></span>
+      <span class="badge live">LIVE</span><span class="screen-flow">→ CTA يبدأ الحجز (B01)</span></div>
+    <div class="screen-body">
+      <p class="device-label">Template SEO — يتكرر لكل فحص · Schema.org MedicalProcedure</p>
+      <div class="wf-hero"><h3>الرنين المغناطيسي على المخ</h3></div>
+      <div class="wf" style="margin-top:12px"><span class="tag">المحتوى الإلزامي لكل فحص (RFP §4.3)</span>
+        <ul class="clist">
+          <li>ما هو هذا الفحص؟</li><li>لماذا يطلبه الطبيب؟</li><li>كيف تستعد (نظام غذائي/ملابس/صبغة/أدوية)</li>
+          <li>ماذا تتوقع أثناء الإجراء (المدة/الصوت/مستوى الانزعاج)</li><li>بعد الفحص: متى تظهر النتيجة؟</li>
+          <li>موانع الاستخدام</li><li>فحوصات ذات صلة</li>
+        </ul>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <div class="wf"><span class="tag">تحضير الفحص</span><div class="line"></div><div class="line w70"></div><div class="btn ghost" style="margin-top:6px">تحميل PDF التحضير</div></div>
+        <div class="wf" style="border-color:var(--red)"><span class="tag" style="background:var(--red-tint-2);color:var(--red-dark)">CTA</span><p style="font-size:13px;margin:0 0 8px">احجز هذا الفحص الآن</p><span class="btn primary">احجز الآن</span></div>
+      </div>
+      <div class="annot"><b>الغرض:</b> صفحة تعليمية + تحويل، مُحسّنة لمحركات البحث (meta + H1 + Schema). <b>RFP §4.3 + §5.5.</b></div>
+    </div>
+  </section>
+
+  <!-- ===================== P12 BRANCH DETAIL ===================== -->
+  <section class="screen" id="P12">
+    <div class="screen-head"><span class="screen-id">P12</span>
+      <span class="screen-name">صفحة فرع<span class="en">Branch Detail</span></span>
+      <span class="badge live">LIVE</span><span class="screen-flow">اعثر على فرع → احجز فيه</span></div>
+    <div class="screen-body">
+      <p class="device-label">Template — يتكرر لـ 18 فرع (بيانات من RFP Appendix F)</p>
+      <div class="row">
+        <div class="wf"><span class="tag">بطاقة الفرع</span>
+          <div class="fieldset">
+            <div class="field"><span class="lbl">العنوان</span>—</div>
+            <div class="field"><span class="lbl">الهاتف</span>19144</div>
+            <div class="field"><span class="lbl">ساعات العمل</span>—</div>
+            <div class="field"><span class="lbl">مواقف السيارات</span>—</div>
+          </div>
+        </div>
+        <div class="wf"><span class="tag">الخريطة + الاتجاهات</span><div class="imgph" style="min-height:120px">🗺️ Google Maps</div><div class="btn ghost" style="margin-top:8px">احصل على الاتجاهات</div></div>
+      </div>
+      <div class="wf" style="margin-top:12px"><span class="tag">الخدمات المتاحة في هذا الفرع</span>
+        <ul class="clist"><li>MRI</li><li>CT</li><li>سونار</li><li>معامل</li><li>أشعة عادية</li></ul>
+        <div class="annot note" style="margin-top:10px"><b>مهم:</b> ربط الفرع بخدماته يغذّي خطوة اختيار الفرع في الحجز <span class="ltr">(B02)</span> — يأتي من الـ booking API لاحقًا.</div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn primary">احجز في هذا الفرع</span></div>
+      <div class="annot"><b>RFP §4.4 (Find a Branch) + Appendix F.</b></div>
+    </div>
+  </section>
+
+  <!-- ===================== P13 FOR PATIENTS HUB ===================== -->
+  <section class="screen" id="P13">
+    <div class="screen-head"><span class="screen-id">P13</span>
+      <span class="screen-name">للمرضى — الصفحة الجامعة<span class="en">For Patients Hub</span></span>
+      <span class="badge live">LIVE</span></div>
+    <div class="screen-body">
+      <div class="wf"><span class="tag">أقسام For Patients (RFP §4.4)</span>
+        <div class="grid g4">
+          <div class="imgph" style="min-height:52px">احجز موعد</div><div class="imgph" style="min-height:52px">اعثر على فرع</div>
+          <div class="imgph" style="min-height:52px">تحضير الفحص</div><div class="imgph" style="min-height:52px">النتائج والتقارير</div>
+          <div class="imgph" style="min-height:52px">بوابة المريض</div><div class="imgph" style="min-height:52px">التأمين والتعاقدات</div>
+          <div class="imgph" style="min-height:52px">الأسئلة الشائعة</div><div class="imgph" style="min-height:52px">السلامة والبروتوكولات</div>
+        </div>
+      </div>
+      <div class="annot"><b>الغرض:</b> مركز كل ما يخص المريض قبل/بعد الزيارة. كل بطاقة تفتح صفحتها.</div>
+    </div>
+  </section>
+
+  <!-- ===================== P24 CONTACT ===================== -->
+  <section class="screen" id="P24">
+    <div class="screen-head"><span class="screen-id">P24</span>
+      <span class="screen-name">اتصل بنا<span class="en">Contact Us</span></span>
+      <span class="badge live">LIVE</span></div>
+    <div class="screen-body">
+      <div class="row">
+        <div class="wf"><span class="tag">نموذج تواصل — توجيه حسب القسم</span>
+          <div class="fieldset">
+            <div class="field"><span class="lbl">الاسم</span>—</div>
+            <div class="field"><span class="lbl">القسم</span>حجوزات / شكاوى / وظائف / إعلام</div>
+            <div class="field"><span class="lbl">الرسالة</span>—</div>
+          </div>
+          <div class="btn-row" style="margin-top:8px"><span class="btn primary">إرسال</span></div>
+        </div>
+        <div class="wf"><span class="tag">قنوات التواصل (RFP §4.8)</span>
+          <ul class="clist">
+            <li>واتساب: 01272203421</li><li>اتصال: 19144</li>
+            <li class="ltr">reservations@cairoscan.com.eg</li><li class="ltr">hiring@cairoscan.com.eg</li>
+          </ul>
+          <div class="imgph" style="min-height:90px;margin-top:10px">🗺️ خريطة الفروع بالأرقام</div>
+        </div>
+      </div>
+      <div class="wf" style="margin-top:12px"><span class="tag">نموذج شكوى (برقم مرجعي) · إعلام · وظائف/CV</span><div class="line w70"></div></div>
+      <div class="annot"><b>RFP §4.8.</b></div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTENT-SPEC STUBS (باقي صفحات الموقع العام) ===================== -->
+  <div class="area-intro" style="margin-top:10px"><h2>باقي صفحات الموقع العام — مواصفات المحتوى</h2>
+  <p>الشاشات التالية جاهزة كمواصفات محتوى (من RFP §4)، وسأحوّلها إلى wireframes كاملة في الدفعة التالية بنفس القالب.</p></div>
+
+  <section class="screen" id="P02"><div class="screen-head"><span class="screen-id">P02</span><span class="screen-name">من نحن / تاريخنا<span class="en">Who We Are / History</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.2 — Who We Are</span><ul class="clist"><li>تأسست 1983 — رائدة الأشعة الخاصة في مصر</li><li>الشركة الأم: RayLab Holding</li><li>خط زمني للإنجازات (1983 → الآن)</li></ul></div></div></section>
+
+  <section class="screen" id="P03"><div class="screen-head"><span class="screen-id">P03</span><span class="screen-name">الرسالة والرؤية والقيم<span class="en">Mission, Vision &amp; Values</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.2</span><ul class="clist"><li>الرسالة</li><li>الرؤية</li><li>القيم: كفاءة · احترام · وحدة · فخر · طموح · تفاؤل</li></ul></div></div></section>
+
+  <section class="screen" id="P04"><div class="screen-head"><span class="screen-id">P04</span><span class="screen-name">الجودة والاعتمادات<span class="en">Quality &amp; Accreditations</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.2</span><ul class="clist"><li>اعتمادات (JCI · CAP · ISO)</li><li>شهادات الأجهزة (Siemens · GE · Philips)</li><li>شريك المعمل الألماني Lab Med Dortmund</li><li>معايير الأمان والحماية من الإشعاع</li></ul></div></div></section>
+
+  <section class="screen" id="P05"><div class="screen-head"><span class="screen-id">P05</span><span class="screen-name">فريق القيادة<span class="en">Leadership Team</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.2</span><ul class="clist"><li>المدير الطبي</li><li>كبار الأطباء (حسب التخصص)</li><li>الإدارة التنفيذية</li></ul></div></div></section>
+
+  <section class="screen" id="P06"><div class="screen-head"><span class="screen-id">P06</span><span class="screen-name">الأخبار والإعلام<span class="en">Media &amp; News</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.2</span><ul class="clist"><li>بيانات صحفية · ظهور إعلامي · مبادرات CSR</li><li>معرض فيديو (جولات · شهادات · مقابلات)</li></ul></div></div></section>
+
+  <section class="screen" id="P07"><div class="screen-head"><span class="screen-id">P07</span><span class="screen-name">الوظائف<span class="en">Careers</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.2</span><ul class="clist"><li>الوظائف المتاحة</li><li>لماذا تعمل معنا؟</li><li>التقديم / رفع CV / واتساب</li></ul></div></div></section>
+
+  <section class="screen" id="P08"><div class="screen-head"><span class="screen-id">P08</span><span class="screen-name">الخدمات — الصفحة الجامعة<span class="en">Services Landing</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.3 — Mega-menu overview</span><ul class="clist"><li>MRI</li><li>CT</li><li>طب نووي</li><li>أشعة النساء</li><li>سونار/دوبلر</li><li>أشعة عادية</li><li>معامل</li><li>خدمات منزلية</li><li>برامج الفحص</li></ul></div></div></section>
+
+  <section class="screen" id="P11"><div class="screen-head"><span class="screen-id">P11</span><span class="screen-name">المواقع — خريطة + قائمة<span class="en">Locations</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.4 / §3 Locations</span><ul class="clist"><li>خريطة تفاعلية (18 دبوس)</li><li>فلترة حسب الخدمة/المنطقة/ساعات العمل</li><li>روابط لصفحات الفروع (→ P12)</li></ul></div></div></section>
+
+  <section class="screen" id="P14"><div class="screen-head"><span class="screen-id">P14</span><span class="screen-name">تحضير الفحوصات<span class="en">Exam Preparation</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.4</span><ul class="clist"><li>قاعدة بيانات قابلة للبحث للتحضيرات</li><li>PDF قابل للطباعة لكل فحص</li><li>ماذا تُحضر (إحالة/تأمين/صور سابقة)</li><li>معلومات الصبغة والحساسية</li><li>استبيان أمان الرنين (يُملأ أونلاين)</li></ul></div></div></section>
+
+  <section class="screen" id="P15"><div class="screen-head"><span class="screen-id">P15</span><span class="screen-name">النتائج والتقارير<span class="en">Results &amp; Reports (info)</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.4</span><ul class="clist"><li>طرق الاستلام: إيميل · CD · تطبيق · بوابة المريض</li><li>أوقات الإنجاز: أشعة ≤ 24 ساعة</li><li>دخول بوابة المريض لتحميل النتائج (→ PP5)</li><li>تفويض طرف ثالث (طبيب)</li></ul></div></div></section>
+
+  <section class="screen" id="P16"><div class="screen-head"><span class="screen-id">P16</span><span class="screen-name">التأمين والتعاقدات<span class="en">Insurance &amp; Contracts</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body">
+      <div class="wf"><span class="tag">قائمة قابلة للبحث (RFP §4.4)</span>
+        <div class="field" style="margin-bottom:8px"><span class="lbl">ابحث عن شركة التأمين</span>🔍 —</div>
+        <div class="grid g4"><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div><div class="ph" style="height:30px"></div></div>
+        <ul class="clist" style="margin-top:10px"><li>+200 شركة تأمين و TPA</li><li>كيف تستخدم تأمينك</li><li>نموذج تعاقد الشركات (→ P23)</li></ul>
+      </div>
+      <div class="annot"><b>RFP §4.4 + Appendix E.</b></div>
+    </div></section>
+
+  <section class="screen" id="P17"><div class="screen-head"><span class="screen-id">P17</span><span class="screen-name">الأسئلة الشائعة<span class="en">FAQs</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.4</span><ul class="clist"><li>مصنّفة حسب الخدمة</li><li>بحث مدعوم بالـ AI</li></ul></div></div></section>
+
+  <section class="screen" id="P18"><div class="screen-head"><span class="screen-id">P18</span><span class="screen-name">السلامة والبروتوكولات<span class="en">Safety &amp; Protocols</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.4</span><ul class="clist"><li>أمان الإشعاع (الجرعات/الحماية)</li><li>أمان الصبغة</li><li>أمان الرنين (المعادن/رهاب الأماكن المغلقة)</li><li>مكافحة العدوى والنظافة</li></ul></div></div></section>
+
+  <section class="screen" id="P19"><div class="screen-head"><span class="screen-id">P19</span><span class="screen-name">المكتبة الصحية — الجامعة<span class="en">Health Library Hub</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.6 — SEO hub</span><ul class="clist"><li>مقالات (≥ مقالين شهريًا)</li><li>أدلة الحالات</li><li>أدلة الفحص</li><li>مكتبة فيديو + إنفوجرافيك</li><li>بحث + وسوم (أشعة/معمل/صحة المرأة/قلب/أورام)</li></ul></div></div></section>
+
+  <section class="screen" id="P20"><div class="screen-head"><span class="screen-id">P20</span><span class="screen-name">مقال صحي<span class="en">Article Detail</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.6 · Schema.org Article</span><ul class="clist"><li>عنوان + غلاف + محتوى</li><li>وسوم + مقالات ذات صلة</li><li>CTA حجز فحص متعلق</li></ul></div></div></section>
+
+  <section class="screen" id="P21"><div class="screen-head"><span class="screen-id">P21</span><span class="screen-name">مكتبة الفيديو<span class="en">Video Library</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.6</span><ul class="clist"><li>جولات المنشآت</li><li>فيديوهات كيفية التحضير</li><li>مقابلات الخبراء</li></ul></div></div></section>
+
+  <section class="screen" id="P22"><div class="screen-head"><span class="screen-id">P22</span><span class="screen-name">الشركات / B2B — الجامعة<span class="en">Corporate / B2B Landing</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.7</span><ul class="clist"><li>باقات صحية للشركات</li><li>كيف تعمل: اتفاقية → حجز الموظفين → فوترة للشركة</li><li>بوابة شركاء التأمين/TPA</li><li>دراسات حالة/شهادات</li></ul></div></div></section>
+
+  <section class="screen" id="P23"><div class="screen-head"><span class="screen-id">P23</span><span class="screen-name">طلب عرض سعر للشركات<span class="en">Request Proposal</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §4.7 — lead form (→ رحلة الشركات)</span><ul class="clist"><li>بيانات الشركة + عدد الموظفين</li><li>الباقة المطلوبة</li><li>يُنشئ lead → بوابة الشركات (C)</li></ul></div></div></section>
+
+  <section class="screen" id="P25"><div class="screen-head"><span class="screen-id">P25</span><span class="screen-name">صفحات قانونية<span class="en">Privacy / Terms / Cookies / Accessibility</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">RFP §3.2 Footer</span><ul class="clist"><li>سياسة الخصوصية (مرتبطة بموافقة الحجز)</li><li>الشروط · الكوكيز · بيان إتاحة الوصول</li></ul></div></div></section>
+
+  <section class="screen" id="P26"><div class="screen-head"><span class="screen-id">P26</span><span class="screen-name">بحث + 404<span class="en">Search &amp; 404</span></span><span class="badge live">LIVE</span></div>
+    <div class="screen-body"><div class="wf"><span class="tag">System pages</span><ul class="clist"><li>نتائج بحث عامة</li><li>صفحة 404 مع روابط سريعة</li></ul></div></div></section>
+
+</main>
+
+<footer class="wf-foot">
+  A · الموقع العام — 6 قوالب كاملة + 20 مواصفة محتوى.
+  <span class="ltr" style="display:block;margin-top:4px">Next batch: expand P02–P26 to full wireframes, then build B (booking), PP, PH, C, A areas.</span>
+</footer>
+
+</body>
+</html>

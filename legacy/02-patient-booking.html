@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cairo Scan — Booking Flow Wireframes</title>
+<link rel="stylesheet" href="wireframe-kit.css">
+</head>
+<body>
+
+<header class="wf-header">
+  <div class="inner">
+    <p class="wf-eyebrow">B · حجز المريض · Booking Flow</p>
+    <h1>تدفّق الحجز — 7 خطوات</h1>
+    <p class="sub">المسار الأساسي للمريض. كل الشاشات <span class="badge mock">MOCK</span> — تُبنى الآن على طبقة بيانات معزولة وتُربط بالـ booking API لاحقًا. الغرض: اعتماد التدفّق قبل التصميم البصري.</p>
+    <div class="pill-row">
+      <span class="pill">Steps: <b>B01 → B07 (+ B08 states)</b></span>
+      <span class="pill">Data: <b>mock / contract</b></span>
+      <span class="pill">RFP: <b>§4.4 Booking Module · §5.2</b></span>
+    </div>
+  </div>
+</header>
+
+<nav class="wf-nav"><div class="inner">
+  <a class="home" href="index.html">◆ Index</a>
+  <a href="01-public.html">→ الموقع العام</a>
+  <a href="#B01">1 الخدمة</a><a href="#B02">2 الفرع</a><a href="#B03">3 الموعد</a>
+  <a href="#B04">4 البيانات</a><a href="#B05">5 المراجعة</a><a href="#B06">6 الدفع</a><a href="#B07">7 التأكيد</a><a href="#B08">الحالات</a>
+  <a href="03-patient-portal.html">بوابة المريض ←</a>
+</div></nav>
+
+<main>
+
+  <!-- B01 -->
+  <section class="screen" id="B01">
+    <div class="screen-head"><span class="screen-id">B01</span><span class="screen-name">اختيار الخدمة / الفحص<span class="en">Choose Service</span></span><span class="badge mock">MOCK</span><span class="screen-flow">الخطوة 1 من 7</span></div>
+    <div class="screen-body">
+      <div class="steps"><span class="s on">1 الخدمة</span><span class="s">2 الفرع</span><span class="s">3 الموعد</span><span class="s">4 البيانات</span><span class="s">5 المراجعة</span><span class="s">6 الدفع</span><span class="s">7 التأكيد</span></div>
+      <div class="wf"><span class="tag">كتالوج الفحوصات — بحث + فئات</span>
+        <div class="field" style="margin-bottom:10px"><span class="lbl">ابحث عن فحص</span>🔍 مثال: رنين على المخ</div>
+        <div class="grid g4">
+          <div class="imgph" style="min-height:46px">MRI</div><div class="imgph" style="min-height:46px">CT</div><div class="imgph" style="min-height:46px">سونار</div><div class="imgph" style="min-height:46px">معامل</div>
+        </div>
+        <div class="annot note" style="margin-top:10px"><b>لكل فحص:</b> مؤشّر مدة التحضير + مدة النتيجة.</div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn primary">التالي: اختيار الفرع</span></div>
+      <div class="annot"><b>Data (mock):</b> قائمة الخدمات. لاحقًا من الـ booking API.</div>
+    </div>
+  </section>
+
+  <!-- B02 -->
+  <section class="screen" id="B02">
+    <div class="screen-head"><span class="screen-id">B02</span><span class="screen-name">اختيار الفرع<span class="en">Choose Branch</span></span><span class="badge mock">MOCK</span><span class="screen-flow">الخطوة 2 من 7</span></div>
+    <div class="screen-body">
+      <div class="steps"><span class="s">1</span><span class="s on">2 الفرع</span><span class="s">3</span><span class="s">4</span><span class="s">5</span><span class="s">6</span><span class="s">7</span></div>
+      <div class="row">
+        <div class="wf"><span class="tag">خريطة + قائمة (فلترة حسب المنطقة)</span><div class="imgph" style="min-height:150px">🗺️ 18 فرع</div></div>
+        <div class="wf"><span class="tag">الفروع التي تقدّم هذا الفحص فقط</span>
+          <div class="field" style="margin-bottom:8px">مصر الجديدة — يقدّم MRI ✓</div>
+          <div class="field" style="margin-bottom:8px">المهندسين — يقدّم MRI ✓</div>
+          <div class="field">المعادي — لا يقدّم هذا الفحص ✕</div>
+          <div class="annot note" style="margin-top:10px"><b>مهم (services-per-branch):</b> نعرض فقط الفروع المتاحة للفحص المختار — يأتي من الـ API.</div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn">السابق</span><span class="btn primary">التالي: اختيار الموعد</span></div>
+      <div class="annot"><b>RFP §4.4 Step 2 · Appendix F.</b></div>
+    </div>
+  </section>
+
+  <!-- B03 -->
+  <section class="screen" id="B03">
+    <div class="screen-head"><span class="screen-id">B03</span><span class="screen-name">اختيار الموعد<span class="en">Choose Slot</span></span><span class="badge mock">MOCK</span><span class="screen-flow">الخطوة 3 من 7 · حرجة</span></div>
+    <div class="screen-body">
+      <div class="steps"><span class="s">1</span><span class="s">2</span><span class="s on">3 الموعد</span><span class="s">4</span><span class="s">5</span><span class="s">6</span><span class="s">7</span></div>
+      <div class="wf" style="border-color:var(--red)"><span class="tag" style="background:var(--red-tint-2);color:var(--red-dark)">تقويم المواعيد المتاحة — real-time</span>
+        <div class="grid g7">
+          <div class="ph" style="height:34px"></div><div class="ph" style="height:34px"></div><div class="imgph" style="min-height:34px">متاح</div><div class="imgph" style="min-height:34px">متاح</div><div class="ph" style="height:34px"></div><div class="imgph" style="min-height:34px">متاح</div><div class="ph" style="height:34px"></div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin:10px 0 6px">الفترات: صباحًا / ظهرًا / مساءً — مع حالة كل موعد (متاح · محدود · مكتمل) بلون + نص.</p>
+        <div class="btn-row"><span class="btn ghost">9:00</span><span class="btn ghost">11:30</span><span class="btn">1:00 (محدود)</span></div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn">السابق</span><span class="btn primary">التالي: بياناتك</span></div>
+      <div class="annot"><b>Data (mock):</b> السلوتس المتاحة لكل فرع/فحص. تحديث كل 60 ثانية. <b>RFP §5.2 (Slot Availability).</b></div>
+    </div>
+  </section>
+
+  <!-- B04 -->
+  <section class="screen" id="B04">
+    <div class="screen-head"><span class="screen-id">B04</span><span class="screen-name">بيانات المريض<span class="en">Patient Details</span></span><span class="badge mock">MOCK</span><span class="screen-flow">الخطوة 4 من 7</span></div>
+    <div class="screen-body">
+      <div class="steps"><span class="s">1</span><span class="s">2</span><span class="s">3</span><span class="s on">4 البيانات</span><span class="s">5</span><span class="s">6</span><span class="s">7</span></div>
+      <div class="wf"><span class="tag">تعريف المريض — رقم قومي أو موبايل</span>
+        <div class="fieldset">
+          <div class="field"><span class="lbl">الرقم القومي / الموبايل</span>—</div>
+          <div class="annot note"><b>مطابقة تلقائية:</b> لو مريض سابق → تعبئة تلقائية. لو جديد → تسجيل. (يأتي من الـ API — mock الآن.)</div>
+          <div class="grid g2">
+            <div class="field"><span class="lbl">الاسم</span>—</div>
+            <div class="field"><span class="lbl">تاريخ الميلاد</span>—</div>
+            <div class="field"><span class="lbl">الموبايل</span>—</div>
+            <div class="field"><span class="lbl">التأمين (اختياري)</span>—</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn">السابق</span><span class="btn primary">التالي: المراجعة</span></div>
+      <div class="annot"><b>RFP §4.4 Step 4 · §5.2 (Patient Record Matching).</b></div>
+    </div>
+  </section>
+
+  <!-- B05 -->
+  <section class="screen" id="B05">
+    <div class="screen-head"><span class="screen-id">B05</span><span class="screen-name">المراجعة والموافقة<span class="en">Review + Consent</span></span><span class="badge live">LIVE</span><span class="screen-flow">الخطوة 5 من 7 · حرجة</span></div>
+    <div class="screen-body">
+      <div class="steps"><span class="s">1</span><span class="s">2</span><span class="s">3</span><span class="s">4</span><span class="s on">5 المراجعة</span><span class="s">6</span><span class="s">7</span></div>
+      <div class="wf"><span class="tag">ملخّص الحجز (قابل للتعديل لكل خطوة)</span>
+        <div class="fieldset">
+          <div class="field"><span class="lbl">الفحص</span>رنين على المخ</div>
+          <div class="field"><span class="lbl">الفرع + الموعد</span>مصر الجديدة · الأحد 9:00</div>
+          <div class="field"><span class="lbl">التحقق من تغطية التأمين</span>—</div>
+        </div>
+      </div>
+      <div class="wf" style="margin-top:10px;border-color:var(--red)"><span class="tag" style="background:var(--red-tint-2);color:var(--red-dark)">موافقة PDPL — إلزامية (قانون 151)</span>
+        <p style="font-size:13px;margin:0"><span style="border:1px solid var(--red);padding:0 5px;border-radius:3px;color:var(--red)">☐</span> أوافق على <a href="01-public.html#P25">سياسة الخصوصية</a> ومعالجة بياناتي.</p>
+        <div class="annot" style="margin-top:8px"><b>يمنع التقدّم:</b> زر "الدفع" مُعطّل حتى تُحدَّد الموافقة.</div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn">السابق</span><span class="btn primary">التالي: الدفع</span></div>
+    </div>
+  </section>
+
+  <!-- B06 -->
+  <section class="screen" id="B06">
+    <div class="screen-head"><span class="screen-id">B06</span><span class="screen-name">الدفع<span class="en">Payment</span></span><span class="badge mock">MOCK</span><span class="screen-flow">الخطوة 6 من 7 · حرجة</span></div>
+    <div class="screen-body">
+      <div class="steps"><span class="s">1</span><span class="s">2</span><span class="s">3</span><span class="s">4</span><span class="s">5</span><span class="s on">6 الدفع</span><span class="s">7</span></div>
+      <div class="wf"><span class="tag">وسائل الدفع (RFP §4.9 / M7)</span>
+        <div class="grid g3">
+          <div class="btn ghost">فوري</div><div class="btn ghost">فيزا / ماستركارد</div><div class="btn ghost">ڤاليو</div>
+          <div class="btn ghost">بريميوم</div><div class="btn ghost">الدفع عند الوصول</div><div class="btn ghost">—</div>
+        </div>
+      </div>
+      <div class="btn-row" style="margin-top:12px"><span class="btn">السابق</span><span class="btn primary">تأكيد الدفع</span></div>
+      <div class="annot"><b>قرار معلّق (#13):</b> هل الدفع أونلاين الآن أم عند التكامل؟ الواجهة جاهزة في الحالتين.</div>
+    </div>
+  </section>
+
+  <!-- B07 -->
+  <section class="screen" id="B07">
+    <div class="screen-head"><span class="screen-id">B07</span><span class="screen-name">تأكيد الحجز<span class="en">Confirmation</span></span><span class="badge mock">MOCK</span><span class="screen-flow">الخطوة 7 من 7</span></div>
+    <div class="screen-body">
+      <div class="steps"><span class="s">1</span><span class="s">2</span><span class="s">3</span><span class="s">4</span><span class="s">5</span><span class="s">6</span><span class="s on">7 التأكيد</span></div>
+      <div class="wf-hero"><h3>✓ تم تأكيد حجزك</h3><p>رقم مرجعي: <span class="ltr">#CS-XXXXXX</span></p>
+        <div class="btn-row" style="justify-content:center"><span class="btn ghost">أضف للتقويم</span><span class="btn ghost">تعليمات التحضير</span></div>
+      </div>
+      <div class="annot"><b>الإشعار:</b> يُرسَل تأكيد عبر SMS / واتساب / إيميل من <u>محرّك الإشعارات بتاعنا</u> (يُطلقه حدث نظام الحجز). <b>RFP §4.4 Step 5 · §5.2 (Order Confirmation).</b></div>
+    </div>
+  </section>
+
+  <!-- B08 -->
+  <section class="screen" id="B08">
+    <div class="screen-head"><span class="screen-id">B08</span><span class="screen-name">حالات الحافة<span class="en">Edge States</span></span><span class="badge mock">MOCK</span></div>
+    <div class="screen-body">
+      <div class="grid g2">
+        <div class="wf"><span class="tag">لا يوجد موعد متاح</span><p style="font-size:12px;color:var(--muted);margin:0">اقتراح أقرب موعد/فرع بديل + زر call center 19144.</p></div>
+        <div class="wf" style="border-color:var(--red)"><span class="tag" style="background:var(--red-tint-2);color:var(--red-dark)">حجز مكرر — محظور</span><p style="font-size:12px;color:var(--muted);margin:0">نفس المريض + نفس الفحص + نفس اليوم عبر كل الفروع = رسالة ودّية. (منع احتيال التأمين — RFP §9.2)</p></div>
+        <div class="wf"><span class="tag">فشل الدفع</span><p style="font-size:12px;color:var(--muted);margin:0">رسالة واضحة + إعادة المحاولة + إبقاء الحجز محجوزًا مؤقتًا.</p></div>
+        <div class="wf"><span class="tag">انتهاء صلاحية الحجز المؤقت</span><p style="font-size:12px;color:var(--muted);margin:0">مؤقّت للحجز المبدئي — تحرير الموعد لو لم يكتمل الدفع.</p></div>
+      </div>
+      <div class="annot"><b>الغرض:</b> تغطية كل مسارات الفشل مبكرًا عشان التصميم والتطوير يتعاملوا معها من البداية.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wf-foot">
+  B · حجز المريض — 7 خطوات + الحالات.
+  <span class="ltr" style="display:block;margin-top:4px">Next: 03 Patient Portal · 04 Physician · 05 Corporate · 06 Admin, then expand public P02–P26 to full wireframes.</span>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Review Mode — annotations layer for reviewers.
+   Off by default → the prototype looks like a clean website.
+   Toggled on → section numbers, RFP refs, component names, layout guides.
+   Injected/controlled by js/review.js.
+   ========================================================================== */
+
+/* section annotation badge (hidden until Review Mode is on) */
+.cs-rev-badge{
+  display:none; position:absolute; top:0; inset-inline-start:0; z-index:40;
+  font-family:'Poppins','Segoe UI',sans-serif; direction:ltr;
+  font-size:11px; font-weight:600; letter-spacing:.02em;
+  background:#1e2024; color:#fff; padding:4px 10px; border-radius:0 0 10px 0;
+  box-shadow:0 2px 10px rgba(20,22,26,.28); pointer-events:none; white-space:nowrap;
+}
+.cs-rev-badge .rfp{color:#f0d9a8; margin-inline-start:8px;}
+.cs-rev-badge .comp{color:#aeb4bd; margin-inline-start:8px; font-weight:500;}
+body.review-on .cs-rev-badge{display:inline-flex; align-items:center;}
+body.review-on [data-rev]{outline:1px dashed rgba(30,32,36,.22); outline-offset:-1px;}
+
+/* layout guides (12-col) — only when Review Mode + Guides on */
+.cs-guides{display:none; position:fixed; inset:0; z-index:30; pointer-events:none;}
+body.guides-on .cs-guides{display:block;}
+.cs-guides .cols{max-width:1200px; height:100%; margin:0 auto; padding-inline:32px;
+  display:grid; grid-template-columns:repeat(12,1fr); gap:24px;}
+.cs-guides .cols span{background:rgba(30,32,36,.045); border-inline:1px solid rgba(30,32,36,.10);}
+@media (max-width:960px){ .cs-guides .cols{grid-template-columns:repeat(4,1fr); padding-inline:20px;} }
+
+/* floating toolbar */
+.cs-rev-toolbar{
+  position:fixed; inset-block-end:16px; inset-inline-start:16px; z-index:9999;
+  display:flex; align-items:center; gap:8px;
+  background:#fff; border:1px solid #e1e4e8; border-radius:16px;
+  padding:8px 12px; box-shadow:0 10px 34px -10px rgba(20,22,26,.4);
+  font-family:'Segoe UI',Tahoma,sans-serif; font-size:13px; color:#1e2024;
+}
+.cs-rev-toolbar .sw{display:inline-flex; align-items:center; gap:8px; cursor:pointer; user-select:none; font-weight:600;}
+.cs-rev-toolbar .dot{width:36px; height:21px; border-radius:20px; background:#d3d6da; position:relative; transition:.15s; flex:none;}
+.cs-rev-toolbar .dot::after{content:''; position:absolute; top:2.5px; inset-inline-start:2.5px;
+  width:16px; height:16px; border-radius:50%; background:#fff; transition:.15s; box-shadow:0 1px 2px rgba(0,0,0,.25);}
+.cs-rev-toolbar .sw.on .dot{background:#1e2024;}
+.cs-rev-toolbar .sw.on .dot::after{inset-inline-start:17.5px;}
+.cs-rev-toolbar input{position:absolute; opacity:0; width:0; height:0;}
+.cs-rev-toolbar .sep{width:1px; height:24px; background:#e8eaed;}
+.cs-rev-toolbar a{color:#4a4e55; text-decoration:none; font-weight:600; padding:7px 9px; border-radius:9px; white-space:nowrap;}
+.cs-rev-toolbar a:hover{background:#f5f6f8; color:#1e2024;}
+.cs-rev-toolbar .guides-toggle{opacity:.38; pointer-events:none; transition:opacity .15s;}
+.cs-rev-toolbar.rev .guides-toggle{opacity:1; pointer-events:auto;}
+
+@media (max-width:520px){
+  .cs-rev-toolbar{inset-inline:10px; inset-block-end:10px; justify-content:space-between; font-size:12px;}
+  .cs-rev-toolbar .guides-toggle b, .cs-rev-toolbar .guides-toggle{display:none;}
+}
+@media print{ .cs-rev-toolbar,.cs-rev-badge,.cs-guides{display:none !important;} }

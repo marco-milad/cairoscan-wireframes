@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cairo Scan — إرسال ملاحظة</title>
+<link rel="stylesheet" href="styles/ds.css">
+<style>
+  .fb-wrap{max-width:640px; margin:0 auto; padding-block:var(--s8);}
+  .fb-card{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:var(--s7); box-shadow:var(--shadow);}
+  .fb-card .eyebrow{margin-bottom:10px;}
+  .fb-card h1{font-size:24px; margin-bottom:10px;}
+  .fb-list{margin:18px 0; padding:0; list-style:none; display:grid; gap:10px;}
+  .fb-list li{background:var(--surface-2); border:1px solid var(--line); border-radius:var(--radius-sm); padding:10px 14px; font-size:14px; color:var(--ink-2);}
+  .fb-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:22px;}
+  .back{display:inline-block; margin-top:20px; color:var(--muted); font-size:13px; text-decoration:none;}
+  .back:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="container fb-wrap">
+  <div class="fb-card">
+    <p class="eyebrow">مركز الملاحظات · Feedback</p>
+    <h1>شاركنا ملاحظاتك على الـ Wireframes</h1>
+    <p class="lead">هدفنا تجميع كل الملاحظات في مكان واحد بدل ما تتوزّع على قنوات كتير. عند إرسال ملاحظة، يُفضّل تذكر:</p>
+    <ul class="fb-list">
+      <li>📄 <b>اسم الشاشة</b> ورقم القسم (فعّل «وضع المراجعة» لرؤيته)</li>
+      <li>🖥️ <b>الجهاز</b>: ديسكتوب / موبايل</li>
+      <li>💬 <b>الملاحظة</b>: تعديل مطلوب · اقتراح · سؤال</li>
+    </ul>
+
+    <div class="fb-actions">
+      <!-- ضع رابط Google Form هنا (data-form) — الزر يفتحه في تبويب جديد -->
+      <a class="btn btn-primary btn-lg" id="fbForm" href="#" target="_blank" rel="noopener">افتح نموذج الملاحظات ↗</a>
+      <a class="btn btn-outline btn-lg" href="mailto:?subject=Cairo%20Scan%20Wireframe%20Feedback">أرسل عبر الإيميل</a>
+    </div>
+
+    <p class="caption" id="fbNote" style="margin-top:16px">
+      ⚠️ رابط Google Form لم يُضبط بعد — أرسل لي الرابط وسأربطه هنا (سطر واحد في هذا الملف).
+    </p>
+
+    <a class="back" href="index.html">← رجوع إلى لوحة المراجعة</a>
+  </div>
+</div>
+
+<script>
+  // Replace with the real Google Form URL, e.g.:
+  // var FEEDBACK_FORM_URL = 'https://forms.gle/XXXXXXXX';
+  var FEEDBACK_FORM_URL = '';
+  (function () {
+    var a = document.getElementById('fbForm'), note = document.getElementById('fbNote');
+    if (FEEDBACK_FORM_URL) { a.href = FEEDBACK_FORM_URL; if (note) note.style.display = 'none'; }
+    else { a.addEventListener('click', function (e) { e.preventDefault(); alert('رابط نموذج الملاحظات لم يُضبط بعد.'); }); }
+  })();
+</script>
+</body>
+</html>
