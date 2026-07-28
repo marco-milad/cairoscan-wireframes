@@ -3,11 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cairo Scan — الصفحة الرئيسية (Home POC · Mid-Fidelity)</title>
+<title>Cairo Scan — الصفحة الرئيسية (Home v2 · Mid-Fidelity)</title>
 <link rel="stylesheet" href="../../styles/ds.css">
 <link rel="stylesheet" href="../../styles/review.css">
+<style>
+  /* home-specific slim utility strip + hero refinements */
+  .topstrip{background:var(--surface-2); border-bottom:1px solid var(--line); font-size:12.5px;}
+  .topstrip .row{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:7px 0; color:var(--ink-2);}
+  .topstrip .em{font-weight:700;}
+  .searchpill{display:inline-flex; align-items:center; gap:8px; background:var(--surface); border:1px solid var(--line);
+    border-radius:var(--radius-pill); padding:7px 14px; color:var(--muted); font-size:13px; min-width:200px;}
+  .hero-quickbook{margin-top:20px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:14px;}
+  .hero-quickbook .qb-row{display:grid; grid-template-columns:1fr; gap:10px;}
+  .ins-mini{display:flex; align-items:center; gap:10px; margin-top:16px; color:var(--muted); font-size:12.5px; flex-wrap:wrap;}
+  .ins-mini .lg{width:54px; height:26px; background:var(--surface-2); border:1px solid var(--line); border-radius:5px;}
+  @media(min-width:960px){ .hero-quickbook .qb-row{grid-template-columns:1.2fr 1fr 1fr auto;} .searchpill{min-width:280px;} }
+  @media(max-width:640px){ .searchpill{min-width:0; flex:1;} .topstrip .row .hideom{display:none;} }
+</style>
 </head>
 <body data-screen="home" data-title="الصفحة الرئيسية" data-rfp-page="§4.1">
+
+<!-- ===================== TOP STRIP (emergency + search) ===================== -->
+<div class="topstrip" data-rev="Global · Utility Strip" data-rfp="§4.8" data-comp="Emergency + Search">
+  <div class="container">
+    <div class="row">
+      <div class="row" style="gap:16px">
+        <span class="em">🚑 خط الطوارئ: 19144</span>
+        <span class="hideom">💬 واتساب: 01272203421</span>
+      </div>
+      <span class="searchpill">🔍 ابحث عن فحص، خدمة، أو فرع…</span>
+    </div>
+  </div>
+</div>
 
 <!-- ===================== HEADER ===================== -->
 <header class="site-header" data-rev="Global · Header" data-rfp="§3" data-comp="Header / Mega-menu">
@@ -17,272 +45,321 @@
         <img class="logo" src="../../assets/logo-mark.png" alt="كايرو سكان">
         <span class="wm"><b>كايرو سكان</b><br><span>للأشعة والتحاليل</span></span>
       </a>
-
       <nav class="mainnav">
         <a href="#">من نحن</a>
         <span class="has-mega">
           <a href="#services">خدماتنا ▾</a>
-          <div class="mega">
-            <div class="mega-grid">
-              <a href="#">الرنين المغناطيسي MRI</a><a href="#">الأشعة المقطعية CT</a>
-              <a href="#">الطب النووي</a><a href="#">أشعة النساء</a>
-              <a href="#">السونار / الدوبلر</a><a href="#">الأشعة العادية</a>
-              <a href="#">المعامل والتحاليل</a><a href="#">الخدمات المنزلية</a>
-            </div>
-          </div>
+          <div class="mega"><div class="mega-grid">
+            <a href="#">الرنين المغناطيسي MRI</a><a href="#">الأشعة المقطعية CT</a>
+            <a href="#">الطب النووي</a><a href="#">أشعة النساء</a>
+            <a href="#">السونار / الدوبلر</a><a href="#">الأشعة العادية</a>
+            <a href="#">المعامل والتحاليل</a><a href="#">الخدمات المنزلية</a>
+          </div></div>
         </span>
-        <a href="#">للمرضى</a>
-        <a href="#">المكتبة الصحية</a>
-        <a href="#">الشركات</a>
-        <a href="#">الفروع</a>
-        <a href="#">اتصل بنا</a>
+        <a href="#">للمرضى</a><a href="#">المكتبة الصحية</a><a href="#">الشركات</a><a href="#">الفروع</a><a href="#">اتصل بنا</a>
       </nav>
-
       <div class="header-cta">
         <span class="lang">AR / EN</span>
         <a class="btn btn-outline btn-sm" href="#">عرض نتائجي</a>
         <a class="btn btn-primary btn-sm" href="#booking">احجز موعد</a>
       </div>
-
       <button class="hamburger" onclick="document.getElementById('mm').classList.toggle('open')" aria-label="القائمة">☰</button>
     </div>
   </div>
   <div class="mobile-menu container" id="mm" style="max-width:none">
-    <a href="#">من نحن</a><a href="#services">خدماتنا</a><a href="#">للمرضى</a>
-    <a href="#">المكتبة الصحية</a><a href="#">الشركات</a><a href="#">الفروع</a><a href="#">اتصل بنا</a>
-    <a class="btn btn-outline btn-block" href="#" style="display:flex">عرض نتائجي</a>
+    <a href="#">من نحن</a><a href="#services">خدماتنا</a><a href="#">للمرضى</a><a href="#">المكتبة الصحية</a>
+    <a href="#">الشركات</a><a href="#">الفروع</a><a href="#">اتصل بنا</a>
     <a class="btn btn-primary btn-block" href="#booking" style="display:flex;margin-top:8px">احجز موعد</a>
   </div>
 </header>
 
-<!-- ===================== 1 · HERO ===================== -->
-<section class="hero" data-rev="1 · Hero" data-rfp="§4.1" data-comp="Hero">
+<!-- ===================== 1 · HERO (split) ===================== -->
+<section class="hero" data-rev="1 · Hero (split + quick-book)" data-rfp="§4.1" data-comp="Hero / Quick-book / Insurance">
   <div class="container">
     <div class="wrap">
       <div>
         <p class="eyebrow kicker">شبكة تشخيصية رائدة منذ 1983</p>
-        <h1 class="display">شبكة مصر الرائدة للأشعة التشخيصية والتحاليل</h1>
-        <p class="lead">سرعة، ودقة، وأكثر من 40 عامًا من الثقة — نتائج أشعة خلال 24 ساعة، و18 فرعًا في خدمتك.</p>
+        <h1 class="display">أشعة وتحاليل<br>تثق فيها مصر</h1>
+        <p class="lead">دقة، سرعة، و+40 عامًا من الثقة — نتائج خلال 24 ساعة، 18 فرعًا، ومعامل معتمدة ألمانيًا.</p>
         <div class="cta-row">
           <a class="btn btn-primary btn-lg" href="#booking">احجز موعد</a>
           <a class="btn btn-outline btn-lg" href="#">عرض نتائجي</a>
         </div>
         <div class="trust">
-          <span class="ti">+40 سنة تميّز</span>
-          <span class="ti">18 فرعًا</span>
-          <span class="ti">+1000 متخصص</span>
-          <span class="ti">معامل معتمدة ألمانيًا</span>
+          <span class="ti">✔ معامل معتمدة ألمانيًا</span>
+          <span class="ti">✔ نتائج في 24 ساعة</span>
+          <span class="ti">✔ +200 شركة تأمين</span>
+        </div>
+
+        <!-- quick booking (above the fold) -->
+        <div class="hero-quickbook" data-rev="Quick-book (inline)" data-comp="Compact booking">
+          <div class="qb-row">
+            <div class="control select">اختر الفحص</div>
+            <div class="control select">الفرع</div>
+            <div class="control select">الموعد</div>
+            <a class="btn btn-primary" href="#booking">ابدأ</a>
+          </div>
+        </div>
+
+        <div class="ins-mini">
+          <span>نقبل:</span><span class="lg"></span><span class="lg"></span><span class="lg"></span><span>+200 شركة</span>
         </div>
       </div>
+
       <div class="preview hero-media">
         <span class="pv">PREVIEW</span>
-        <span class="pv-desc">فيديو/بانر بعرض كامل — مرضى ومنشآت كايرو سكان</span>
+        <span class="pv-desc">▶ فيديو طبي — مرضى ومنشآت وأجهزة كايرو سكان</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 2 · SERVICES OVERVIEW ===================== -->
-<section class="section alt" id="services" data-rev="2 · Services Overview" data-rfp="§4.1" data-comp="Icon grid ×7 + quick-access">
-  <div class="container">
-    <div class="section-head">
-      <p class="eyebrow">خدماتنا</p>
-      <h2>سبع فئات تشخيصية متكاملة</h2>
-      <p>اختر الفئة لعرض الفحوصات وتفاصيل التحضير والحجز المباشر.</p>
-    </div>
-    <div class="grid g-7">
-      <a class="card flat pad-sm stack" href="#" style="align-items:center;gap:10px;text-align:center"><span class="icontile">🧲</span><b class="small">الرنين MRI</b></a>
-      <a class="card flat pad-sm stack" href="#" style="align-items:center;gap:10px;text-align:center"><span class="icontile">🩻</span><b class="small">المقطعية CT</b></a>
-      <a class="card flat pad-sm stack" href="#" style="align-items:center;gap:10px;text-align:center"><span class="icontile">☢️</span><b class="small">الطب النووي</b></a>
-      <a class="card flat pad-sm stack" href="#" style="align-items:center;gap:10px;text-align:center"><span class="icontile">🌸</span><b class="small">أشعة النساء</b></a>
-      <a class="card flat pad-sm stack" href="#" style="align-items:center;gap:10px;text-align:center"><span class="icontile">📡</span><b class="small">السونار</b></a>
-      <a class="card flat pad-sm stack" href="#" style="align-items:center;gap:10px;text-align:center"><span class="icontile">🦴</span><b class="small">أشعة عادية</b></a>
-      <a class="card flat pad-sm stack" href="#" style="align-items:center;gap:10px;text-align:center"><span class="icontile">🧪</span><b class="small">المعامل</b></a>
-    </div>
-    <div class="row" style="margin-top:20px;justify-content:space-between">
-      <b class="small">وصول سريع لبرامج الفحص:</b>
-      <div class="chips">
-        <span class="chip">رعاية القلب</span><span class="chip">سرطان الثدي</span>
-        <span class="chip">فحص المرأة</span><span class="chip">فحص الرجل</span><span class="chip">فحص المدخنين</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ===================== 2 · QUICK ACCESS BAR ===================== -->
+<nav class="quickaccess" data-rev="2 · Quick-Access Bar" data-rfp="§3 · §4.4" data-comp="Quick access ×5">
+  <div class="container"><div class="qa-row">
+    <a class="qa" href="#"><span class="ic">📍</span><span><b>اعثر على فرع</b><span>18 فرعًا</span></span></a>
+    <a class="qa" href="#"><span class="ic">🩺</span><span><b>اعثر على طبيب</b><span>حسب التخصص</span></span></a>
+    <a class="qa" href="#"><span class="ic">🛡️</span><span><b>التأمين</b><span>تحقق من تغطيتك</span></span></a>
+    <a class="qa" href="#"><span class="ic">📄</span><span><b>نتائجي</b><span>حمّل تقاريرك</span></span></a>
+    <a class="qa" href="#"><span class="ic">💬</span><span><b>واتساب</b><span>احجز في الشات</span></span></a>
+  </div></div>
+</nav>
 
-<!-- ===================== 3 · WHY CAIRO SCAN ===================== -->
-<section class="section" data-rev="3 · Why Cairo Scan" data-rfp="§4.1" data-comp="Differentiators ×4">
+<!-- ===================== 3 · SERVICES (medical cards) ===================== -->
+<section class="section tint" id="services" data-rev="3 · Services (Medical Cards)" data-rfp="§4.1 · §4.3" data-comp="Medical Category Cards">
   <div class="container">
-    <div class="section-head"><p class="eyebrow">لماذا كايرو سكان؟</p><h2>فارق يصنع الثقة</h2></div>
-    <div class="grid g-4">
-      <div class="card"><span class="icontile" style="margin-bottom:12px">🇩🇪</span><h4>معامل معتمدة ألمانيًا</h4><p class="small">شراكة مع Lab Med Dortmund لضمان أعلى جودة.</p></div>
-      <div class="card"><span class="icontile" style="margin-bottom:12px">🛡️</span><h4>أكبر شبكة تأمين في مصر</h4><p class="small">تعاقدات مع +200 شركة تأمين و TPA.</p></div>
-      <div class="card"><span class="icontile" style="margin-bottom:12px">⏱️</span><h4>نتائج خلال 24 ساعة</h4><p class="small">تقارير الأشعة في 24 ساعة أو أقل.</p></div>
-      <div class="card"><span class="icontile" style="margin-bottom:12px">🏠</span><h4>خدمات منزلية</h4><p class="small">أشعة وتحاليل في منزلك بسهولة.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 4 · STATS BAR ===================== -->
-<section class="section tint" style="padding-block:var(--s6)" data-rev="4 · Statistics Bar" data-rfp="§4.1" data-comp="Stat ×4">
-  <div class="container">
-    <div class="grid g-4">
-      <div class="stat"><b>+1M</b><span>مريض سنويًا</span></div>
-      <div class="stat"><b>+2M</b><span>فحص سنويًا</span></div>
-      <div class="stat"><b>18</b><span>فرعًا</span></div>
-      <div class="stat"><b>+40</b><span>سنة خبرة</span></div>
-    </div>
-    <p class="caption" style="text-align:center;margin-top:12px">* أرقام توضيحية — تُحدَّث من الـ CMS</p>
-  </div>
-</section>
-
-<!-- ===================== 5 · FEATURED SCREENING PROGRAMS ===================== -->
-<section class="section alt" data-rev="5 · Featured Screening Programs" data-rfp="§4.1" data-comp="Horizontal scroll cards">
-  <div class="container">
-    <div class="section-head between">
-      <div><p class="eyebrow">برامج الفحص</p><h2>باقات فحص مميّزة</h2></div>
-      <a class="btn btn-outline btn-sm" href="#">كل البرامج</a>
-    </div>
-    <div class="hscroll">
-      <div class="card" style="width:230px"><div class="preview" style="min-height:120px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><h4>رعاية القلب</h4><p class="caption">فحص شامل للقلب والأوعية.</p></div>
-      <div class="card" style="width:230px"><div class="preview" style="min-height:120px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><h4>سرطان الثدي</h4><p class="caption">كشف مبكر بالماموجرام.</p></div>
-      <div class="card" style="width:230px"><div class="preview" style="min-height:120px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><h4>فحص المرأة</h4><p class="caption">باقة صحية متكاملة.</p></div>
-      <div class="card" style="width:230px"><div class="preview" style="min-height:120px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><h4>فحص الرجل</h4><p class="caption">فحص دوري شامل.</p></div>
-      <div class="card" style="width:230px"><div class="preview" style="min-height:120px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><h4>فحص المدخنين</h4><p class="caption">تقييم صحة الرئة.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== 6 · HOW IT WORKS ===================== -->
-<section class="section" data-rev="6 · How It Works" data-rfp="§4.1" data-comp="3-step journey">
-  <div class="container">
-    <div class="section-head"><p class="eyebrow">كيف يعمل</p><h2>ثلاث خطوات بسيطة</h2></div>
+    <div class="section-head"><p class="eyebrow">خدماتنا</p><h2>خدمات تشخيصية بمعايير عالمية</h2>
+      <p>كل فئة بصفحتها وتفاصيل تحضيرها وحجزها المباشر.</p></div>
     <div class="grid g-3">
-      <div class="card"><div class="row" style="gap:12px"><b class="stat" style="font-size:22px">1</b><h4>احجز</h4></div><p class="small" style="margin-top:8px">اختر الفحص والفرع والموعد أونلاين.</p></div>
-      <div class="card"><div class="row" style="gap:12px"><b class="stat" style="font-size:22px">2</b><h4>زُر الفرع</h4></div><p class="small" style="margin-top:8px">أو اطلب الخدمة المنزلية.</p></div>
-      <div class="card"><div class="row" style="gap:12px"><b class="stat" style="font-size:22px">3</b><h4>استلم النتائج</h4></div><p class="small" style="margin-top:8px">عبر البوابة أو الإيميل خلال 24 ساعة.</p></div>
+      <a class="medcard" href="#"><div class="preview thumb"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="ic">🧲</span><h3>الرنين المغناطيسي (MRI)</h3>
+        <p class="desc">تصوير دقيق للمخ والعمود والمفاصل والقلب بدون إشعاع.</p><span class="cta">استعرض الفحوصات ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="ic">🩻</span><h3>الأشعة المقطعية (CT)</h3>
+        <p class="desc">مقاطع سريعة عالية الدقة للصدر والبطن والأوعية.</p><span class="cta">استعرض الفحوصات ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="ic">📡</span><h3>السونار والدوبلر</h3>
+        <p class="desc">فحوصات آمنة للبطن والحمل والأوعية الدموية.</p><span class="cta">استعرض الفحوصات ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="ic">🌸</span><h3>أشعة النساء</h3>
+        <p class="desc">ماموجرام، سونار الثدي، ومتابعة الحمل.</p><span class="cta">استعرض الفحوصات ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="ic">☢️</span><h3>الطب النووي</h3>
+        <p class="desc">PET-CT ومسح العظام والغدة والكلى.</p><span class="cta">استعرض الفحوصات ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="ic">🧪</span><h3>المعامل والتحاليل</h3>
+        <p class="desc">شراكة ألمانية Lab Med Dortmund — دقة معتمدة.</p><span class="cta">استعرض التحاليل ←</span></div></a>
     </div>
-    <div class="row" style="margin-top:16px"><span class="badge ok">مواعيد في نفس اليوم / اليوم التالي</span><span class="badge ok">خدمة منزلية متاحة</span></div>
   </div>
 </section>
 
-<!-- ===================== 7 · BOOKING MODULE ===================== -->
-<section class="section tint" id="booking" data-rev="7 · Booking Module" data-rfp="§4.1 · §5.2" data-comp="Inline booking widget (mock)">
+<!-- ===================== 4 · BOOKING (full section, up top) ===================== -->
+<section class="section" id="booking" data-rev="4 · Booking Section (full)" data-rfp="§4.1 · §5.2" data-comp="Booking stepper (mock)">
   <div class="container">
-    <div class="section-head"><p class="eyebrow">احجز الآن</p><h2>ابدأ حجزك في ثوانٍ</h2><p>اختصار سريع — أو ابدأ التدفّق الكامل خطوة بخطوة.</p></div>
+    <div class="section-head"><p class="eyebrow">احجز أونلاين</p><h2>احجز فحصك في 4 خطوات</h2>
+      <p>حجز فوري — الأماكن المتاحة لحظية من نظام الحجز (تُربط بالـ API لاحقًا).</p></div>
+    <div class="stepper" style="margin-bottom:26px">
+      <div class="st"><span class="ic">🔬</span><h4>اختر الفحص</h4><p>ابحث في كتالوج الفحوصات</p></div>
+      <div class="st"><span class="ic">📍</span><h4>اختر الفرع</h4><p>الفروع المتاحة للفحص</p></div>
+      <div class="st"><span class="ic">🗓️</span><h4>اختر الموعد</h4><p>مواعيد متاحة لحظية</p></div>
+      <div class="st"><span class="ic">🧑</span><h4>بياناتك</h4><p>ثم أكمل الحجز</p></div>
+    </div>
     <div class="card">
       <div class="grid g-3" style="gap:14px">
         <div class="field"><label>نوع الفحص</label><div class="control select">اختر الفحص</div></div>
         <div class="field"><label>الفرع المفضّل</label><div class="control select">اختر الفرع</div></div>
         <div class="field"><label>التاريخ / الوقت</label><div class="control select">اختر الموعد</div></div>
-        <div class="field"><label>الاسم</label><div class="control">اكتب اسمك</div></div>
-        <div class="field"><label>رقم الموبايل</label><div class="control">01xxxxxxxxx</div></div>
-        <div class="field"><label>التأمين (اختياري)</label><div class="control">شركة التأمين</div></div>
       </div>
       <div class="row" style="margin-top:16px;justify-content:space-between">
-        <a class="btn btn-primary btn-lg" href="#">ابدأ الحجز</a>
+        <a class="btn btn-primary btn-lg" href="#">متابعة الحجز</a>
         <span class="caption">أو عبر واتساب · أو مركز الاتصال 19144</span>
       </div>
-      <div class="wf-note">🔗 <b>Booking:</b> يُبنى الآن على بيانات وهمية (mock) خلف طبقة معزولة — تُربط بالـ booking API لاحقًا (real-time slots + إنشاء الحجز). <span class="en">RFP §4.1 / §5.2</span></div>
+      <div class="wf-note">🔗 <b>Booking:</b> mock الآن خلف طبقة معزولة — يُربط بنظام الحجز (services-per-branch + slots + create). <span class="en">§4.4 / §5.2</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 8 · TESTIMONIALS ===================== -->
-<section class="section alt" data-rev="8 · Testimonials" data-rfp="§4.1" data-comp="Reviews carousel + trust badge">
+<!-- ===================== 5 · TRUST + ACCREDITATIONS + STATS (dark) ===================== -->
+<section class="section section--dark" data-rev="5 · Trust · Accreditations · Stats" data-rfp="§4.1 · §4.2" data-comp="Accreditation band + big numbers">
   <div class="container">
-    <div class="section-head between">
-      <div><p class="eyebrow">آراء المرضى</p><h2>موثوقون من آلاف المرضى</h2></div>
-      <span class="badge ok" style="font-size:14px;padding:8px 14px">تقييم 4.8/5 من +10,000 مريض</span>
+    <div class="section-head"><p class="eyebrow">لماذا كايرو سكان؟</p><h2>ثقة مبنية على الاعتماد والخبرة</h2>
+      <p>اعتمادات دولية، شراكة معملية ألمانية، وأكبر شبكة تأمين في مصر.</p></div>
+
+    <div class="logoband" style="margin-bottom:34px">
+      <div class="lg"><b>Lab Med Dortmund</b><small>شريك المعمل 🇩🇪</small></div>
+      <div class="lg"><b>ISO</b><small>اعتماد الجودة</small></div>
+      <div class="lg"><b>CAP</b><small>College of American Pathologists</small></div>
+      <div class="lg"><b>ACR</b><small>American College of Radiology</small></div>
+      <div class="lg"><b>JCI</b><small>اعتماد دولي</small></div>
     </div>
-    <div class="grid g-3">
-      <div class="card"><p class="caption">★★★★★</p><p class="small">"خدمة سريعة ونتائج دقيقة وفريق محترم." — مريض موثّق</p></div>
-      <div class="card"><p class="caption">★★★★★</p><p class="small">"حجزت أونلاين واستلمت النتيجة في نفس اليوم." — مريض موثّق</p></div>
-      <div class="card"><p class="caption">★★★★☆</p><p class="small">"فروع قريبة وتغطية تأمين ممتازة." — مريض موثّق</p></div>
+
+    <div class="grid g-4">
+      <div class="bignum"><b>+40</b><span>سنة خبرة</span></div>
+      <div class="bignum"><b>18</b><span>فرعًا</span></div>
+      <div class="bignum"><b>+1M</b><span>مريض سنويًا</span></div>
+      <div class="bignum"><b>4.8/5</b><span>رضا +10,000 مريض</span></div>
+    </div>
+
+    <div class="row" style="justify-content:center;margin-top:30px">
+      <div class="preview" style="min-height:120px;max-width:420px;width:100%;background:#26292f;border-color:#3a3e45;color:#8b929c">
+        <span class="pv" style="background:#26292f;border-color:#3a3e45;color:#c8ccd2">▶ VIDEO</span>
+        <span class="pv-desc" style="color:#9aa0a8">جولة داخل كايرو سكان — 60 ثانية</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 9 · NEWS & HEALTH TIPS ===================== -->
-<section class="section" data-rev="9 · News & Health Tips" data-rfp="§4.1 · §4.6" data-comp="Article cards ×3">
+<!-- ===================== 6 · PATIENT JOURNEY (visual) ===================== -->
+<section class="section" data-rev="6 · Patient Journey (visual)" data-rfp="§4.1" data-comp="Journey stepper (big icons)">
   <div class="container">
-    <div class="section-head between">
-      <div><p class="eyebrow">المكتبة الصحية</p><h2>أحدث المقالات والنصائح</h2></div>
-      <a class="btn btn-outline btn-sm" href="#">كل المقالات</a>
-    </div>
-    <div class="grid g-3">
-      <a class="card" href="#"><div class="preview" style="min-height:140px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><span class="caption">أشعة</span><h4 style="margin-top:4px">متى تحتاج رنينًا مغناطيسيًا؟</h4></a>
-      <a class="card" href="#"><div class="preview" style="min-height:140px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><span class="caption">صحة المرأة</span><h4 style="margin-top:4px">جدول فحص سرطان الثدي حسب العمر</h4></a>
-      <a class="card" href="#"><div class="preview" style="min-height:140px;margin-bottom:12px"><span class="pv">PREVIEW</span></div><span class="caption">قلب</span><h4 style="margin-top:4px">تقييم مخاطر أمراض القلب</h4></a>
+    <div class="section-head" style="text-align:center"><p class="eyebrow">رحلتك معنا</p><h2>ثلاث خطوات فقط</h2></div>
+    <div class="stepper">
+      <div class="st"><span class="ic">🗓️</span><h4>احجز</h4><p>أونلaين أو واتساب في دقيقة</p></div>
+      <div class="st"><span class="ic">🏥</span><h4>زُر الفرع</h4><p>أو اطلب الخدمة المنزلية</p></div>
+      <div class="st"><span class="ic">📄</span><h4>استلم النتائج</h4><p>عبر البوابة خلال 24 ساعة</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 10 · BRANCH LOCATOR PREVIEW ===================== -->
-<section class="section tint" data-rev="10 · Branch Locator Preview" data-rfp="§4.1 · §4.4" data-comp="Map + nearest 3 + CTA">
+<!-- ===================== 7 · SCREENING PROGRAMS (bigger) ===================== -->
+<section class="section tint" data-rev="7 · Featured Screening Programs" data-rfp="§4.1" data-comp="Program cards (large)">
+  <div class="container">
+    <div class="section-head between"><div><p class="eyebrow">برامج الفحص</p><h2>باقات فحص مصمّمة لصحتك</h2></div>
+      <a class="btn btn-outline btn-sm" href="#">كل البرامج</a></div>
+    <div class="grid g-3">
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:170px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="badge ok" style="width:fit-content">الأكثر طلبًا</span><h3>رعاية القلب</h3>
+        <p class="desc">تقييم شامل للقلب والأوعية والشرايين.</p><span class="cta">احجز الباقة ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:170px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="badge ok" style="width:fit-content">كشف مبكر</span><h3>سرطان الثدي</h3>
+        <p class="desc">ماموجرام وسونار الثدي حسب العمر.</p><span class="cta">احجز الباقة ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:170px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="badge ok" style="width:fit-content">شامل</span><h3>فحص المرأة الكامل</h3>
+        <p class="desc">باقة صحية متكاملة للسيدات.</p><span class="cta">احجز الباقة ←</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8 · TESTIMONIALS (enhanced) ===================== -->
+<section class="section" data-rev="8 · Testimonials (healthcare)" data-rfp="§4.1" data-comp="Verified reviews + meta">
+  <div class="container">
+    <div class="section-head between"><div><p class="eyebrow">آراء المرضى</p><h2>تجارب حقيقية موثّقة</h2></div>
+      <span class="badge ok" style="font-size:14px;padding:8px 14px">★ 4.8/5 من +10,000 مريض</span></div>
+    <div class="grid g-3">
+      <div class="tcard">
+        <div class="head"><span class="avatar">صورة</span>
+          <div class="who"><b>م. أحمد س. <span class="verified">✔ موثّق</span></b><span>فرع مصر الجديدة</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p class="small">"حجزت رنين على المخ أونلاين واستلمت النتيجة نفس اليوم. تنظيم ممتاز."</p>
+        <div class="meta"><span class="chip">🧲 رنين مغناطيسي</span></div>
+      </div>
+      <div class="tcard">
+        <div class="head"><span class="avatar">صورة</span>
+          <div class="who"><b>د. منى ر. <span class="verified">✔ موثّق</span></b><span>فرع المهندسين</span></div></div>
+        <div class="stars">★★★★★</div>
+        <p class="small">"دقة التحاليل عالية جدًا بفضل الشراكة الألمانية. أنصح بها."</p>
+        <div class="meta"><span class="chip">🧪 تحاليل معملية</span></div>
+      </div>
+      <div class="tcard">
+        <div class="head"><span class="avatar">صورة</span>
+          <div class="who"><b>أ. كريم ف. <span class="verified">✔ موثّق</span></b><span>فرع المعادي</span></div></div>
+        <div class="stars">★★★★☆</div>
+        <p class="small">"فروع قريبة وتغطية تأمين ممتازة، والخدمة المنزلية وفّرت عليّ وقت."</p>
+        <div class="meta"><span class="chip">📡 سونار</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9 · BRANCH PREVIEW ===================== -->
+<section class="section tint" data-rev="9 · Branch Locator Preview" data-rfp="§4.1 · §4.4" data-comp="Map + nearest branches">
   <div class="container">
     <div class="grid g-2" style="align-items:stretch;gap:24px">
-      <div class="preview" style="min-height:260px"><span class="pv">PREVIEW</span><span class="pv-desc">خريطة تفاعلية — تحديد أقرب 3 فروع تلقائيًا (Google Maps)</span></div>
+      <div class="preview" style="min-height:280px"><span class="pv">PREVIEW</span><span class="pv-desc">🗺️ خريطة تفاعلية — أقرب 3 فروع (Google Maps)</span></div>
       <div class="stack" style="justify-content:center">
-        <p class="eyebrow">الفروع</p>
-        <h2 style="margin:6px 0 14px">اعثر على أقرب فرع إليك</h2>
+        <p class="eyebrow">18 فرعًا في خدمتك</p><h2 style="margin:6px 0 16px">اعثر على أقرب فرع</h2>
         <div class="stack" style="gap:10px">
-          <div class="card pad-sm between"><div><b class="small">مصر الجديدة</b><br><span class="caption">2.1 كم · مفتوح حتى 10م</span></div><span class="badge ok">متاح</span></div>
-          <div class="card pad-sm between"><div><b class="small">المهندسين 1</b><br><span class="caption">4.3 كم · مفتوح حتى 10م</span></div><span class="badge ok">متاح</span></div>
-          <div class="card pad-sm between"><div><b class="small">المعادي</b><br><span class="caption">6.0 كم · مفتوح حتى 9م</span></div><span class="badge ok">متاح</span></div>
+          <div class="card pad-sm between"><div><b class="small">مصر الجديدة</b><br><span class="caption">2.1 كم · مفتوح حتى 10م</span></div><a class="btn btn-outline btn-sm" href="#">احجز</a></div>
+          <div class="card pad-sm between"><div><b class="small">المهندسين 1</b><br><span class="caption">4.3 كم · مفتوح حتى 10م</span></div><a class="btn btn-outline btn-sm" href="#">احجز</a></div>
+          <div class="card pad-sm between"><div><b class="small">المعادي</b><br><span class="caption">6.0 كم · مفتوح حتى 9م</span></div><a class="btn btn-outline btn-sm" href="#">احجز</a></div>
         </div>
-        <a class="btn btn-outline" href="#" style="margin-top:16px;align-self:flex-start">اعثر على فرع قريب</a>
+        <a class="btn btn-primary" href="#" style="margin-top:16px;align-self:flex-start">كل الفروع</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== 11 · INSURANCE BAND ===================== -->
-<section class="section" data-rev="11 · Insurance & Contracts Band" data-rfp="§4.1 · §4.4" data-comp="Logo grid + CTA">
+<!-- ===================== 10 · INSURANCE MARQUEE ===================== -->
+<section class="section" style="padding-block:var(--s6)" data-rev="10 · Insurance Partners" data-rfp="§4.1 · §4.4" data-comp="Logo marquee">
   <div class="container">
-    <div class="card between" style="flex-wrap:wrap;gap:20px">
-      <div>
-        <h3>نقبل أكثر من 200 شركة تأمين</h3>
-        <p class="small" style="margin-top:6px">تحقق من تغطيتك قبل الحجز.</p>
-      </div>
-      <div class="row" style="gap:10px">
-        <span class="preview" style="min-height:44px;width:90px"><span class="caption">شعار</span></span>
-        <span class="preview" style="min-height:44px;width:90px"><span class="caption">شعار</span></span>
-        <span class="preview" style="min-height:44px;width:90px"><span class="caption">شعار</span></span>
-        <span class="preview" style="min-height:44px;width:90px"><span class="caption">شعار</span></span>
-      </div>
-      <a class="btn btn-primary" href="#">تحقق من تغطيتك</a>
+    <p class="caption" style="text-align:center;margin-bottom:16px">موثوق من أكثر من 200 شركة تأمين و TPA</p>
+    <div class="marquee"><div class="track">
+      <span class="preview lg"><span class="caption">شعار</span></span><span class="preview lg"><span class="caption">شعار</span></span>
+      <span class="preview lg"><span class="caption">شعار</span></span><span class="preview lg"><span class="caption">شعار</span></span>
+      <span class="preview lg"><span class="caption">شعار</span></span><span class="preview lg"><span class="caption">شعار</span></span>
+      <span class="preview lg"><span class="caption">شعار</span></span><span class="preview lg"><span class="caption">شعار</span></span>
+      <span class="preview lg"><span class="caption">شعار</span></span><span class="preview lg"><span class="caption">شعار</span></span>
+      <span class="preview lg"><span class="caption">شعار</span></span><span class="preview lg"><span class="caption">شعار</span></span>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===================== 11 · ARTICLES ===================== -->
+<section class="section tint" data-rev="11 · News & Health Tips" data-rfp="§4.1 · §4.6" data-comp="Article cards">
+  <div class="container">
+    <div class="section-head between"><div><p class="eyebrow">المكتبة الصحية</p><h2>اعرف أكثر عن صحتك</h2></div>
+      <a class="btn btn-outline btn-sm" href="#">كل المقالات</a></div>
+    <div class="grid g-3">
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:150px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="caption">أشعة</span><h3 style="font-size:16px">متى تحتاج رنينًا مغناطيسيًا؟</h3><span class="cta">اقرأ ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:150px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="caption">صحة المرأة</span><h3 style="font-size:16px">جدول فحص سرطان الثدي حسب العمر</h3><span class="cta">اقرأ ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:150px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="caption">قلب</span><h3 style="font-size:16px">تقييم مخاطر أمراض القلب</h3><span class="cta">اقرأ ←</span></div></a>
     </div>
   </div>
 </section>
 
-<!-- ===================== 12 · APP DOWNLOAD ===================== -->
-<section class="section tint" data-rev="12 · App Download Banner" data-rfp="§4.1" data-comp="App promo">
+<!-- ===================== 12 · APP CTA (gradient) ===================== -->
+<section class="section section--dark" data-rev="12 · App Download" data-rfp="§4.1" data-comp="App promo (dark)">
   <div class="container">
-    <div class="card between" style="flex-wrap:wrap;gap:20px;background:var(--ink);border:none">
-      <div style="color:#fff"><h3 style="color:#fff">حمّل تطبيق كايرو سكان</h3><p class="small" style="color:#cfd2d7;margin-top:6px">احجز، وتابع مواعيدك، واستلم نتائجك من موبايلك.</p></div>
-      <div class="row"><span class="btn btn-ghost">App Store</span><span class="btn btn-ghost">Google Play</span></div>
+    <div class="between" style="flex-wrap:wrap;gap:24px">
+      <div><h2 style="margin-bottom:8px">تطبيق كايرو سكان في جيبك</h2>
+        <p>احجز، تابع مواعيدك، واستلم نتائجك وصورك (DICOM) من موبايلك.</p></div>
+      <div class="row"><span class="btn btn-ghost" style="background:#33373e;color:#fff"> App Store</span><span class="btn btn-ghost" style="background:#33373e;color:#fff">▶ Google Play</span></div>
     </div>
   </div>
 </section>
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="site-footer" data-rev="Global · Footer" data-rfp="§3.2" data-comp="Footer / Utility nav">
+<!-- ===================== FOOTER (mega) ===================== -->
+<footer class="site-footer footer--mega" data-rev="Global · Footer (enterprise)" data-rfp="§3.2" data-comp="Mega footer">
   <div class="container">
+    <div class="footer-top">
+      <div class="brand"><img class="logo" src="../../assets/logo-mark.png" alt="كايرو سكان"><span class="wm" style="color:#fff"><b style="color:#fff">كايرو سكان</b><br><span style="color:#9aa0a8">للأشعة والتحاليل</span></span></div>
+      <div class="hot"><span>📞 <b>19144</b></span><span>💬 <b>01272203421</b></span><span>🚑 <b>خط الطوارئ</b></span></div>
+    </div>
     <div class="footcols">
       <div>
-        <div class="brand" style="margin-bottom:12px"><img class="logo" src="../../assets/logo-mark.png" alt="كايرو سكان"><span class="wm" style="color:#fff"><b style="color:#fff">كايرو سكان</b><br><span style="color:#9aa0a8">للأشعة والتحاليل</span></span></div>
-        <p class="small" style="color:#9aa0a8">شبكة مصر الرائدة للأشعة التشخيصية والتحاليل منذ 1983 — تابعة لـ RayLab Holding.</p>
+        <p class="small" style="color:#9aa0a8">شبكة مصر الرائدة للأشعة التشخيصية والتحاليل منذ 1983 — تابعة لـ RayLab Holding. 18 فرعًا · معامل معتمدة ألمانيًا.</p>
+        <div class="row" style="margin-top:12px;gap:8px"><span class="btn btn-ghost btn-sm" style="background:#33373e;color:#fff">Facebook</span><span class="btn btn-ghost btn-sm" style="background:#33373e;color:#fff">Instagram</span><span class="btn btn-ghost btn-sm" style="background:#33373e;color:#fff">LinkedIn</span></div>
       </div>
-      <div><h4>الخدمات</h4><a href="#">الرنين MRI</a><a href="#">المقطعية CT</a><a href="#">أشعة النساء</a><a href="#">المعامل</a></div>
-      <div><h4>للمرضى</h4><a href="#">احجز موعد</a><a href="#">النتائج والتقارير</a><a href="#">التأمين والتعاقدات</a><a href="#">الأسئلة الشائعة</a></div>
-      <div><h4>تواصل معنا</h4><a href="#">📞 19144</a><a href="#">واتساب: 01272203421</a><a href="#">الفروع</a><a href="#">وظائف</a></div>
+      <div><h4>الخدمات</h4><a href="#">MRI</a><a href="#">CT</a><a href="#">أشعة النساء</a><a href="#">الطب النووي</a><a href="#">المعامل</a><a href="#">الخدمات المنزلية</a></div>
+      <div><h4>للمرضى</h4><a href="#">احجز موعد</a><a href="#">النتائج والتقارير</a><a href="#">تحضير الفحص</a><a href="#">التأمين</a><a href="#">الأسئلة الشائعة</a></div>
+      <div><h4>الشركة</h4><a href="#">من نحن</a><a href="#">الاعتمادات</a><a href="#">المكتبة الصحية</a><a href="#">الشركات B2B</a><a href="#">وظائف</a></div>
+      <div><h4>روابط</h4><a href="#">الفروع</a><a href="#">للأطباء</a><a href="#">بوابة المريض</a><a href="#">الخصوصية</a><a href="#">الشروط</a></div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 كايرو سكان — جميع الحقوق محفوظة</span>
-      <span>الخصوصية · الشروط · بيان إتاحة الوصول · <span class="en">AR / EN</span></span>
+      <span>بيان إتاحة الوصول · سياسة الكوكيز · <span class="en">AR / EN</span></span>
     </div>
   </div>
 </footer>
+
+<!-- ===================== STICKY BOOKING CTA (mobile) ===================== -->
+<div class="sticky-cta" data-rev="Global · Sticky Booking CTA" data-rfp="§4.1" data-comp="Mobile sticky CTA">
+  <a class="btn btn-primary" href="#booking">احجز موعد</a>
+  <a class="btn btn-outline wa" href="#" aria-label="واتساب">💬</a>
+</div>
 
 <script>
   document.addEventListener('click',function(e){

@@ -34,7 +34,7 @@ body.guides-on .cs-guides{display:block;}
   padding:8px 12px; box-shadow:0 10px 34px -10px rgba(20,22,26,.4);
   font-family:'Segoe UI',Tahoma,sans-serif; font-size:13px; color:#1e2024;
 }
-.cs-rev-toolbar .sw{display:inline-flex; align-items:center; gap:8px; cursor:pointer; user-select:none; font-weight:600;}
+.cs-rev-toolbar .sw{display:inline-flex; align-items:center; gap:8px; cursor:pointer; -webkit-user-select:none; user-select:none; font-weight:600;}
 .cs-rev-toolbar .dot{width:36px; height:21px; border-radius:20px; background:#d3d6da; position:relative; transition:.15s; flex:none;}
 .cs-rev-toolbar .dot::after{content:''; position:absolute; top:2.5px; inset-inline-start:2.5px;
   width:16px; height:16px; border-radius:50%; background:#fff; transition:.15s; box-shadow:0 1px 2px rgba(0,0,0,.25);}
@@ -47,8 +47,10 @@ body.guides-on .cs-guides{display:block;}
 .cs-rev-toolbar .guides-toggle{opacity:.38; pointer-events:none; transition:opacity .15s;}
 .cs-rev-toolbar.rev .guides-toggle{opacity:1; pointer-events:auto;}
 
+/* keep the toolbar clear of the mobile sticky booking CTA */
+@media (max-width:959px){ .cs-rev-toolbar{inset-block-end:84px;} }
 @media (max-width:520px){
-  .cs-rev-toolbar{inset-inline:10px; inset-block-end:10px; justify-content:space-between; font-size:12px;}
+  .cs-rev-toolbar{inset-inline:10px; justify-content:space-between; font-size:12px;}
   .cs-rev-toolbar .guides-toggle b, .cs-rev-toolbar .guides-toggle{display:none;}
 }
 @media print{ .cs-rev-toolbar,.cs-rev-badge,.cs-guides{display:none !important;} }
