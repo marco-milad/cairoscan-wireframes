@@ -259,9 +259,9 @@ h2{font-size:26px;}
 
 /* huge numbers */
 .bignum{text-align:center;}
-.bignum b{display:block; font-size:44px; font-weight:700; letter-spacing:-.02em; line-height:1; color:var(--ink);}
-.bignum span{font-size:13px; color:var(--muted);}
-@media (min-width:960px){ .bignum b{font-size:66px;} }
+.bignum b{display:block; font-size:56px; font-weight:800; letter-spacing:-.03em; line-height:.92; color:var(--ink);}
+.bignum span{font-size:14px; color:var(--muted); margin-top:6px; display:block;}
+@media (min-width:960px){ .bignum b{font-size:92px;} }
 
 /* stepper (journey / booking) */
 .stepper{display:flex; align-items:flex-start; gap:8px;}
@@ -274,9 +274,11 @@ h2{font-size:26px;}
 
 /* logo band / accreditation */
 .logoband{display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:center;}
-.logoband .lg{min-width:120px; height:62px; border:1px dashed var(--line); border-radius:10px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; font-size:12px; color:var(--muted); background:var(--surface); flex:1;}
-.logoband .lg small{font-size:10px; opacity:.7;}
-.section--dark .logoband .lg{background:#26292f; border-color:#3a3e45; color:#c8ccd2;}
+.logoband .lg{min-width:160px; min-height:104px; padding:16px; border:1px solid var(--line); border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; text-align:center; color:var(--muted); background:var(--surface); flex:1;}
+.logoband .lg b{font-size:18px; color:var(--ink);}
+.logoband .lg small{font-size:11.5px; opacity:.85; max-width:22ch; line-height:1.45;}
+.section--dark .logoband .lg{background:#26292f; border-color:#3a3e45; color:#aeb4bd;}
+.section--dark .logoband .lg b{color:#fff;}
 
 /* enhanced testimonial */
 .tcard{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:18px;}
@@ -344,3 +346,47 @@ html,body{overflow-x:hidden; max-width:100%;}
 .wa-float svg{width:32px; height:32px;}
 @media (max-width:959px){ .wa-float{display:none;} }
 @media print{ .wa-float{display:none;} }
+
+/* ==========================================================================
+   v3 — booking hierarchy, numbered steps, service counts, big video
+   ========================================================================== */
+
+/* vertical hero quick-book */
+.hero-quickbook .qb-title{font-weight:700; font-size:15px; margin-bottom:12px;}
+.hero-quickbook .qb-fields{display:flex; flex-direction:column; gap:10px; margin-bottom:14px;}
+
+/* numbered stepper with a connecting line */
+.numsteps{display:flex; position:relative; margin-bottom:22px;}
+.numsteps::before{content:''; position:absolute; top:23px; inset-inline:14%; height:2px; background:var(--line); z-index:0;}
+.numsteps .ns{flex:1; z-index:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px;}
+.numsteps .ns .n{width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-en); font-weight:700; font-size:17px; background:var(--surface); border:2px solid var(--line); color:var(--muted);}
+.numsteps .ns.active .n{background:var(--action); border-color:var(--action); color:#fff;}
+.numsteps .ns h4{font-size:14px;} .numsteps .ns p{font-size:12px; color:var(--muted);}
+@media (max-width:640px){
+  .numsteps{flex-direction:column; gap:14px;} .numsteps::before{display:none;}
+  .numsteps .ns{flex-direction:row; align-items:center; text-align:start; gap:12px;}
+  .numsteps .ns .ns-txt h4{font-size:14px;} .numsteps .ns .ns-txt p{font-size:12px;}
+}
+
+/* booking form: progress + sectioned layout */
+.form-progress{display:flex; align-items:center; gap:12px; margin-bottom:18px; font-size:13px; font-weight:600; color:var(--muted);}
+.form-progress .pbar{flex:1; height:7px; background:var(--surface-3); border-radius:20px; overflow:hidden;}
+.form-progress .pbar i{display:block; height:100%; width:25%; background:var(--action); border-radius:20px;}
+.form-section-label{font-size:12px; font-weight:700; color:var(--muted); letter-spacing:.05em; text-transform:uppercase; margin-bottom:12px;}
+.form-divider{border:0; border-top:1px dashed var(--line); margin:22px 0;}
+
+/* service card — exam count + CTA row */
+.medcard .med-meta{margin-top:auto; padding-top:10px; display:flex; align-items:center; justify-content:space-between; gap:10px;}
+.medcard .count{font-size:12px; font-weight:700; color:var(--ink-2); background:var(--surface-2); border:1px solid var(--line); border-radius:20px; padding:4px 11px; white-space:nowrap;}
+
+/* big video split (≈70/30) */
+.video-split{display:grid; gap:20px; grid-template-columns:1fr;}
+.video-split .v-main{min-height:300px;}
+@media (min-width:960px){ .video-split{grid-template-columns:7fr 3fr; align-items:stretch;} .video-split .v-main{min-height:360px;} }
+.section--dark .video-split .v-main{background:#26292f; border-color:#3a3e45; color:#aeb4bd;}
+.section--dark .video-split .v-side{color:#b6bbc3;}
+
+/* mobile header book button */
+.header-book-m{display:none;}
+@media (max-width:959px){ .header-book-m{display:inline-flex; margin-inline-start:auto;} .hamburger{margin-inline-start:8px;} }
