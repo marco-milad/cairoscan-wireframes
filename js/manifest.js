@@ -16,7 +16,7 @@ window.CS_PROJECT = {
   areas: [
     { id:'public', name:'الموقع العام', en:'Public Website', screens:[
       { t:'الصفحة الرئيسية',        en:'Home',                 path:'pages/public/home.html',            status:'ready',   rfp:'§4.1' },
-      { t:'من نحن / تاريخنا',        en:'About — Who We Are',   path:'pages/public/about.html',           status:'planned', rfp:'§4.2' },
+      { t:'من نحن / تاريخنا',        en:'About — Who We Are',   path:'pages/public/about.html',           status:'ready',   rfp:'§4.2' },
       { t:'الرسالة والرؤية والقيم',  en:'Mission/Vision/Values',path:'pages/public/mission.html',         status:'planned', rfp:'§4.2' },
       { t:'الجودة والاعتمادات',      en:'Quality & Accred.',    path:'pages/public/accreditations.html',  status:'planned', rfp:'§4.2' },
       { t:'فريق القيادة',           en:'Leadership',           path:'pages/public/leadership.html',      status:'planned', rfp:'§4.2' },

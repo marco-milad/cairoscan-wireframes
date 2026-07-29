@@ -390,3 +390,34 @@ html,body{overflow-x:hidden; max-width:100%;}
 /* mobile header book button */
 .header-book-m{display:none;}
 @media (max-width:959px){ .header-book-m{display:inline-flex; margin-inline-start:auto;} .hamburger{margin-inline-start:8px;} }
+
+/* ==========================================================================
+   Interior pages — page hero, breadcrumb, timeline, team cards
+   ========================================================================== */
+.pagehero{background:var(--surface-2); border-bottom:1px solid var(--line);}
+.pagehero .wrap{padding-block:var(--s7);}
+.crumb{font-size:12.5px; color:var(--muted); margin-bottom:12px;}
+.crumb a{color:var(--muted);} .crumb a:hover{color:var(--ink);}
+.pagehero h1{font-size:32px;} .pagehero .lead{max-width:62ch; margin-top:10px;}
+@media (min-width:960px){ .pagehero h1{font-size:44px;} }
+
+/* section anchor list (sticky sub-nav for long interior pages) */
+.subnav{position:sticky; top:66px; z-index:40; background:var(--surface); border-bottom:1px solid var(--line);}
+.subnav .row{display:flex; gap:6px; overflow-x:auto; padding:10px 0;}
+.subnav a{white-space:nowrap; font-size:13.5px; font-weight:600; color:var(--muted); padding:7px 13px; border-radius:8px;}
+.subnav a:hover{background:var(--surface-2); color:var(--ink);}
+
+/* vertical timeline */
+.timeline{display:flex; flex-direction:column;}
+.timeline .tl{display:flex; gap:16px; position:relative;}
+.timeline .tl .yr{flex:none; width:58px; font-family:var(--font-en); font-weight:800; font-size:18px; color:var(--action); direction:ltr; padding-top:1px;}
+.timeline .tl .mid{flex:none; display:flex; flex-direction:column; align-items:center;}
+.timeline .tl .dot{width:14px; height:14px; border-radius:50%; background:var(--action); margin-top:5px;}
+.timeline .tl .bar{width:2px; flex:1; background:var(--line); margin:6px 0;}
+.timeline .tl:last-child .bar{display:none;}
+.timeline .tl .tl-body{padding-bottom:24px;}
+.timeline .tl .tl-body h4{font-size:15px;} .timeline .tl .tl-body p{font-size:13.5px; color:var(--muted); margin-top:3px;}
+
+/* team card */
+.team-card .ava{min-height:200px; margin-bottom:12px;}
+.team-card b{font-size:15px; display:block;} .team-card .role{font-size:12.5px; color:var(--muted);}

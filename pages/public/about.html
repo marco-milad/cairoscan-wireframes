@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cairo Scan — من نحن (About · Mid-Fidelity)</title>
+<link rel="stylesheet" href="../../styles/ds.css">
+<link rel="stylesheet" href="../../styles/review.css">
+<style>
+  .topstrip{background:var(--surface-2); border-bottom:1px solid var(--line); font-size:12.5px;}
+  .topstrip .row{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:7px 0; color:var(--ink-2);}
+  .topstrip .em{font-weight:700;}
+  .searchpill{display:inline-flex; align-items:center; gap:8px; background:var(--surface); border:1px solid var(--line);
+    border-radius:var(--radius-pill); padding:7px 14px; color:var(--muted); font-size:13px; min-width:200px;}
+  @media(max-width:640px){ .searchpill{min-width:0; flex:1;} .topstrip .row .hideom{display:none;} }
+</style>
+</head>
+<body data-screen="about" data-title="من نحن" data-rfp-page="§4.2">
+
+<!-- TOP STRIP -->
+<div class="topstrip" data-rev="Global · Utility Strip" data-rfp="§4.8" data-comp="Emergency + Search">
+  <div class="container"><div class="row">
+    <div class="row" style="gap:16px"><span class="em">🚑 خط الطوارئ: 19144</span><span class="hideom">💬 واتساب: 01272203421</span></div>
+    <span class="searchpill">🔍 ابحث عن فحص، خدمة، أو فرع…</span>
+  </div></div>
+</div>
+
+<!-- HEADER (shared) -->
+<header class="site-header" data-rev="Global · Header" data-rfp="§3" data-comp="Header / Mega-menu / Book CTA">
+  <div class="container">
+    <div class="bar">
+      <a class="brand" href="home.html">
+        <img class="logo" src="../../assets/logo-mark.png" alt="كايرو سكان">
+        <span class="wm"><b>كايرو سكان</b><br><span>للأشعة والتحاليل</span></span>
+      </a>
+      <nav class="mainnav">
+        <a href="about.html">من نحن</a>
+        <span class="has-mega"><a href="#">خدماتنا ▾</a>
+          <div class="mega"><div class="mega-grid">
+            <a href="#">الرنين المغناطيسي MRI</a><a href="#">الأشعة المقطعية CT</a>
+            <a href="#">الطب النووي</a><a href="#">أشعة النساء</a>
+            <a href="#">السونار / الدوبلر</a><a href="#">الأشعة العادية</a>
+            <a href="#">المعامل والتحاليل</a><a href="#">الخدمات المنزلية</a>
+          </div></div></span>
+        <a href="#">للمرضى</a><a href="#">للأطباء</a><a href="#">المكتبة الصحية</a><a href="#">الشركات</a><a href="#">الفروع</a><a href="#">اتصل بنا</a>
+      </nav>
+      <div class="header-cta">
+        <span class="lang">AR / EN</span>
+        <a class="btn btn-outline btn-sm" href="#">عرض نتائجي</a>
+        <a class="btn btn-primary btn-sm" href="home.html#booking">احجز موعد</a>
+      </div>
+      <a class="btn btn-primary btn-sm header-book-m" href="home.html#booking">احجز</a>
+      <button class="hamburger" onclick="document.getElementById('mm').classList.toggle('open')" aria-label="القائمة">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu container" id="mm" style="max-width:none">
+    <a href="about.html">من نحن</a><a href="#">خدماتنا</a><a href="#">للمرضى</a><a href="#">للأطباء</a><a href="#">المكتبة الصحية</a>
+    <a href="#">الشركات</a><a href="#">الفروع</a><a href="#">اتصل بنا</a>
+    <a class="btn btn-primary btn-block" href="home.html#booking" style="display:flex;margin-top:8px">احجز موعد</a>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="pagehero" data-rev="1 · Page Hero" data-rfp="§4.2" data-comp="Breadcrumb + title">
+  <div class="container"><div class="wrap">
+    <p class="crumb"><a href="home.html">الرئيسية</a> ← من نحن</p>
+    <h1 class="display">روّاد الأشعة التشخيصية في مصر منذ 1983</h1>
+    <p class="lead">أكثر من 40 عامًا من التميّز في التشخيص الطبي — 18 فرعًا، معامل معتمدة ألمانيًا، وأكبر شبكة تأمين في مصر. تابعة لـ RayLab Holding.</p>
+  </div></div>
+</section>
+
+<!-- SUB-NAV -->
+<nav class="subnav" data-rev="Sub-nav (anchors)" data-comp="In-page navigation">
+  <div class="container"><div class="row">
+    <a href="#who">من نحن</a><a href="#history">تاريخنا</a><a href="#mvv">الرسالة والقيم</a>
+    <a href="#quality">الجودة والاعتمادات</a><a href="#leadership">القيادة</a><a href="#media">الإعلام والأخبار</a><a href="#careers">الوظائف</a>
+  </div></div>
+</nav>
+
+<!-- 2 · WHO WE ARE -->
+<section class="section" id="who" data-rev="2 · Who We Are" data-rfp="§4.2" data-comp="Brand narrative + stats">
+  <div class="container">
+    <div class="grid g-2" style="align-items:center;gap:30px">
+      <div>
+        <p class="eyebrow">من نحن</p>
+        <h2>رعاية تشخيصية تثق فيها الأجيال</h2>
+        <p class="lead" style="margin:12px 0">تأسّست كايرو سكان عام 1983 كأولى مراكز الأشعة التشخيصية الخاصة في مصر، وتطوّرت لتصبح شبكة رائدة من 18 فرعًا تقدّم الأشعة والطب النووي والتحاليل بأحدث الأجهزة وأعلى معايير الجودة.</p>
+        <p class="small">الشركة الأم: <b>RayLab Holding Company</b> — مجموعة رعاية تشخيصية متعددة الجنسيات.</p>
+        <div class="grid g-3" style="margin-top:20px">
+          <div class="stat"><b>1983</b><span>سنة التأسيس</span></div>
+          <div class="stat"><b>~1000</b><span>موظف</span></div>
+          <div class="stat"><b>18</b><span>فرعًا</span></div>
+        </div>
+      </div>
+      <div class="preview" style="min-height:300px"><span class="pv">PREVIEW</span><span class="pv-desc">صورة — أحد مراكز كايرو سكان</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · HISTORY (timeline) -->
+<section class="section tint" id="history" data-rev="3 · Our History (timeline)" data-rfp="§4.2" data-comp="Milestones timeline">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">مسيرتنا</p><h2>محطات على مدى 40 عامًا</h2></div>
+    <div class="timeline" style="max-width:760px">
+      <div class="tl"><div class="yr">1983</div><div class="mid"><span class="dot"></span><span class="bar"></span></div>
+        <div class="tl-body"><h4>التأسيس</h4><p>افتتاح أول مركز أشعة تشخيصية خاص في مصر.</p></div></div>
+      <div class="tl"><div class="yr">1995</div><div class="mid"><span class="dot"></span><span class="bar"></span></div>
+        <div class="tl-body"><h4>التوسّع</h4><p>افتتاح فروع جديدة في القاهرة الكبرى وإدخال الرنين المغناطيسي.</p></div></div>
+      <div class="tl"><div class="yr">2008</div><div class="mid"><span class="dot"></span><span class="bar"></span></div>
+        <div class="tl-body"><h4>الطب النووي و PET-CT</h4><p>إضافة خدمات الطب النووي والتصوير المتقدّم.</p></div></div>
+      <div class="tl"><div class="yr">2015</div><div class="mid"><span class="dot"></span><span class="bar"></span></div>
+        <div class="tl-body"><h4>الشراكة الألمانية</h4><p>شراكة معملية مع Lab Med Dortmund لضمان دقة معتمدة عالميًا.</p></div></div>
+      <div class="tl"><div class="yr">2024</div><div class="mid"><span class="dot"></span><span class="bar"></span></div>
+        <div class="tl-body"><h4>التحوّل الرقمي</h4><p>18 فرعًا، بوابة مرضى، وحجز أونلاين متكامل.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · MISSION / VISION / VALUES -->
+<section class="section" id="mvv" data-rev="4 · Mission, Vision & Values" data-rfp="§4.2" data-comp="Mission/Vision + 6 values">
+  <div class="container">
+    <div class="grid g-2" style="gap:20px;margin-bottom:26px">
+      <div class="card"><p class="eyebrow">رسالتنا</p><p style="margin-top:8px">تقديم أعلى معايير خدمات التشخيص الطبي في الأشعة والتحاليل لأفراد مجتمعنا.</p></div>
+      <div class="card"><p class="eyebrow">رؤيتنا</p><p style="margin-top:8px">أن نصبح المزوّد الرائد للخدمات التشخيصية والفحوصات الطبية الخاصة في مصر والمنطقة.</p></div>
+    </div>
+    <div class="section-head"><p class="eyebrow">قيمنا</p><h2>ست قيم توجّه كل ما نقدّمه</h2></div>
+    <div class="grid g-3">
+      <div class="card"><span class="icontile" style="margin-bottom:10px">🎯</span><h4>الكفاءة</h4><p class="small">أعلى مستوى من الدقة والاحترافية.</p></div>
+      <div class="card"><span class="icontile" style="margin-bottom:10px">🤝</span><h4>الاحترام</h4><p class="small">كرامة المريض أولًا.</p></div>
+      <div class="card"><span class="icontile" style="margin-bottom:10px">🔗</span><h4>الوحدة</h4><p class="small">فريق واحد لهدف واحد.</p></div>
+      <div class="card"><span class="icontile" style="margin-bottom:10px">🏅</span><h4>الفخر</h4><p class="small">فخر بإرثنا وخدمتنا.</p></div>
+      <div class="card"><span class="icontile" style="margin-bottom:10px">🚀</span><h4>الطموح</h4><p class="small">نطوّر باستمرار.</p></div>
+      <div class="card"><span class="icontile" style="margin-bottom:10px">🌤️</span><h4>التفاؤل</h4><p class="small">رعاية بإيجابية وأمل.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · QUALITY & ACCREDITATIONS (dark) -->
+<section class="section section--dark" id="quality" data-rev="5 · Quality & Accreditations" data-rfp="§4.2" data-comp="Accreditations + equipment + safety">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">الجودة والاعتمادات</p><h2>جودة معتمدة دوليًا</h2>
+      <p>اعتمادات عالمية، أجهزة من كبرى الشركات، ومعايير صارمة للأمان والحماية من الإشعاع.</p></div>
+    <div class="logoband" style="margin-bottom:34px">
+      <div class="lg"><b>JCI</b><small>الاعتماد الدولي لجودة الرعاية الصحية</small></div>
+      <div class="lg"><b>CAP</b><small>College of American Pathologists</small></div>
+      <div class="lg"><b>ISO</b><small>اعتماد نظام إدارة الجودة الدولي</small></div>
+      <div class="lg"><b>ACR</b><small>American College of Radiology</small></div>
+      <div class="lg"><b>Lab Med Dortmund</b><small>الشريك المعملي الألماني</small></div>
+    </div>
+    <div class="grid g-2" style="gap:20px">
+      <div class="card"><h4 style="color:#fff">أجهزة معتمدة</h4><p class="small">أحدث الأجهزة من <b>Siemens · GE · Philips</b> — صيانة ومعايرة دورية لضمان الدقة.</p></div>
+      <div class="card"><h4 style="color:#fff">الأمان والحماية من الإشعاع</h4><p class="small">بروتوكولات صارمة للجرعات، حماية المرضى والعاملين، ومكافحة العدوى.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · LEADERSHIP -->
+<section class="section" id="leadership" data-rev="6 · Leadership Team" data-rfp="§4.2" data-comp="Team cards">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">القيادة</p><h2>فريق طبي وإداري متمرّس</h2></div>
+    <div class="grid g-4">
+      <div class="team-card"><div class="preview ava"><span class="pv">PREVIEW</span></div><b>د. — —</b><span class="role">المدير الطبي</span></div>
+      <div class="team-card"><div class="preview ava"><span class="pv">PREVIEW</span></div><b>د. — —</b><span class="role">كبير أطباء الأشعة</span></div>
+      <div class="team-card"><div class="preview ava"><span class="pv">PREVIEW</span></div><b>د. — —</b><span class="role">استشاري الطب النووي</span></div>
+      <div class="team-card"><div class="preview ava"><span class="pv">PREVIEW</span></div><b>أ. — —</b><span class="role">الرئيس التنفيذي</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · MEDIA & NEWS -->
+<section class="section tint" id="media" data-rev="7 · Media & News" data-rfp="§4.2" data-comp="News + video gallery">
+  <div class="container">
+    <div class="section-head between"><div><p class="eyebrow">الإعلام والأخبار</p><h2>أحدث أخبارنا ومبادراتنا</h2></div>
+      <a class="btn btn-outline btn-sm" href="#">كل الأخبار</a></div>
+    <div class="grid g-3">
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:150px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="caption">خبر</span><h3 style="font-size:16px">افتتاح فرع جديد بأحدث أجهزة الرنين</h3><span class="cta">اقرأ ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:150px"><span class="pv">PREVIEW</span></div>
+        <div class="body"><span class="caption">مبادرة CSR</span><h3 style="font-size:16px">حملة كشف مبكر مجانية للسيدات</h3><span class="cta">اقرأ ←</span></div></a>
+      <a class="medcard" href="#"><div class="preview thumb" style="min-height:150px"><span class="pv">VIDEO ▶</span></div>
+        <div class="body"><span class="caption">فيديو</span><h3 style="font-size:16px">جولة داخل مراكز كايرو سكان</h3><span class="cta">شاهد ←</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · CAREERS -->
+<section class="section" id="careers" data-rev="8 · Careers" data-rfp="§4.2" data-comp="Openings + apply CTA">
+  <div class="container">
+    <div class="card between" style="flex-wrap:wrap;gap:20px">
+      <div><p class="eyebrow">الوظائف</p><h2 style="margin:6px 0 8px">انضم إلى فريق كايرو سكان</h2>
+        <p class="small">فرص للأطباء والفنيين والإداريين — بيئة عمل داعمة وتطوّر مستمر.</p></div>
+      <div class="row"><a class="btn btn-primary" href="#">الوظائف المتاحة</a><a class="btn btn-outline" href="#">أرسل سيرتك الذاتية</a></div>
+    </div>
+    <div class="grid g-3" style="margin-top:16px">
+      <div class="card pad-sm between"><div><b class="small">أخصائي أشعة</b><br><span class="caption">القاهرة · دوام كامل</span></div><a class="btn btn-outline btn-sm" href="#">تقديم</a></div>
+      <div class="card pad-sm between"><div><b class="small">فني معمل</b><br><span class="caption">الجيزة · دوام كامل</span></div><a class="btn btn-outline btn-sm" href="#">تقديم</a></div>
+      <div class="card pad-sm between"><div><b class="small">خدمة عملاء</b><br><span class="caption">مصر الجديدة · دوام كامل</span></div><a class="btn btn-outline btn-sm" href="#">تقديم</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (shared) -->
+<footer class="site-footer footer--mega" data-rev="Global · Footer (enterprise)" data-rfp="§3.2" data-comp="Mega footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="brand"><img class="logo" src="../../assets/logo-mark.png" alt="كايرو سكان"><span class="wm" style="color:#fff"><b style="color:#fff">كايرو سكان</b><br><span style="color:#9aa0a8">للأشعة والتحاليل</span></span></div>
+      <div class="hot"><span>📞 <b>19144</b></span><span>💬 <b>01272203421</b></span><span>🚑 <b>خط الطوارئ</b></span></div>
+    </div>
+    <div class="footcols">
+      <div><p class="small" style="color:#9aa0a8">شبكة مصر الرائدة للأشعة التشخيصية والتحاليل منذ 1983 — تابعة لـ RayLab Holding. 18 فرعًا · معامل معتمدة ألمانيًا.</p>
+        <div class="row" style="margin-top:12px;gap:8px"><span class="btn btn-ghost btn-sm" style="background:#33373e;color:#fff">Facebook</span><span class="btn btn-ghost btn-sm" style="background:#33373e;color:#fff">Instagram</span><span class="btn btn-ghost btn-sm" style="background:#33373e;color:#fff">LinkedIn</span></div></div>
+      <div><h4>الخدمات</h4><a href="#">MRI</a><a href="#">CT</a><a href="#">أشعة النساء</a><a href="#">الطب النووي</a><a href="#">المعامل</a></div>
+      <div><h4>للمرضى</h4><a href="#">احجز موعد</a><a href="#">النتائج والتقارير</a><a href="#">تحضير الفحص</a><a href="#">التأمين</a></div>
+      <div><h4>الشركة</h4><a href="about.html">من نحن</a><a href="about.html#quality">الاعتمادات</a><a href="#">المكتبة الصحية</a><a href="about.html#careers">وظائف</a></div>
+      <div><h4>روابط</h4><a href="#">الفروع</a><a href="#">للأطباء</a><a href="#">بوابة المريض</a><a href="#">الخصوصية</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 كايرو سكان — جميع الحقوق محفوظة</span><span>بيان إتاحة الوصول · سياسة الكوكيز · <span class="en">AR / EN</span></span></div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="#" aria-label="تواصل عبر واتساب" title="تواصل عبر واتساب">
+  <svg viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.5.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.5-.3z"/>
+    <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4 15 3.5 13.5 3.5 12 3.5 7.3 7.3 3.5 12 3.5S20.5 7.3 20.5 12 16.7 20 12 20z"/>
+  </svg>
+</a>
+
+<!-- STICKY BOOKING CTA (mobile) -->
+<div class="sticky-cta" data-rev="Global · Sticky Booking CTA" data-rfp="§4.1" data-comp="Mobile sticky CTA">
+  <a class="btn btn-primary" href="home.html#booking">احجز موعد</a>
+  <a class="btn btn-outline wa" href="#" aria-label="واتساب">💬</a>
+</div>
+
+<script>
+  document.addEventListener('click',function(e){
+    var mm=document.getElementById('mm');
+    if(mm && mm.classList.contains('open') && !e.target.closest('#mm') && !e.target.closest('.hamburger')) mm.classList.remove('open');
+  });
+</script>
+<script src="../../js/review.js"></script>
+
+</body>
+</html>
