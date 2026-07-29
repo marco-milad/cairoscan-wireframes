@@ -55,6 +55,19 @@
     "+200 شركة": "200+ insurers",
     "▶ فيديو طبي — مرضى ومنشآت وأجهزة كايرو سكان": "▶ Medical video — Cairo Scan patients, facilities & devices",
 
+    /* —— AI section + price estimate —— */
+    "تقنية متقدمة": "Advanced technology",
+    "دقة مدعومة بالذكاء الاصطناعي": "Accuracy powered by AI",
+    "نجمع بين خبرة أطبائنا وأحدث تقنيات الذكاء الاصطناعي لتشخيص أدق وأسرع.": "We combine our physicians' expertise with the latest AI technology for faster, more accurate diagnosis.",
+    "كشف مبكر مدعوم بالذكاء الاصطناعي (مثل سرطان الثدي)": "AI-assisted early detection (e.g. breast cancer)",
+    "تحليل صور أدق وتقليل الأخطاء": "More precise image analysis, fewer errors",
+    "مراجعة مزدوجة: الذكاء الاصطناعي + طبيب متخصص": "Double review: AI + a specialist physician",
+    "اعرف أكثر عن تقنياتنا ←": "Learn about our technology ←",
+    "تصور — تحليل صورة أشعة بمساعدة الذكاء الاصطناعي": "Illustration — AI-assisted scan analysis",
+    "تقدير التكلفة": "Cost estimate",
+    "تغطية التأمين": "Insurance coverage",
+    "1,800 – 2,400 ج.م": "1,800 – 2,400 EGP",
+
     /* —— quick access —— */
     "اعثر على فرع": "Find a branch", "18 فرعًا": "18 branches",
     "اعثر على طبيب": "Find a doctor", "حسب التخصص": "By specialty",

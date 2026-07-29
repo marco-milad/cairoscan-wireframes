@@ -14,11 +14,10 @@ The client benchmarks us against SimonMed & Health Images (gold standards) plus 
 DINW, Imaging Healthcare Specialists and Memorial. Weave these in so our work "matches
 or exceeds" them (RFP §7). Priority: 🔴 high · 🟡 medium · 🟢 standard.
 
-- [ ] 🔴 **AI-assisted imaging highlight** (SimonMed, RadNet EBCD) — a Home section/badge +
-      a short "Technology / AI" story; call out AI-supported detection as a differentiator.
-      → Home + a services/tech page.
-- [ ] 🔴 **Price estimate / Good Faith Estimate at booking** (RadNet) — show an estimated cost
-      / self-pay estimate and insurance-coverage check during booking. → Booking flow + For Patients.
+- [x] 🔴 **AI-assisted imaging highlight** (SimonMed, RadNet EBCD) — DONE on Home as a dedicated
+      "Accuracy powered by AI" section (placeholder — confirm the AI capability with the client).
+- [x] 🔴 **Price estimate / Good Faith Estimate at booking** (RadNet) — DONE as a step inside the
+      Home booking flow (cost estimate + insurance-coverage check). Wire real numbers later.
 - [ ] 🔴 **Physician portal depth** (RadNet + 2026 best-practice) — turnaround-time SLA per
       modality, **real-time case status**, radiology prep protocols, prior-auth support, e-fax.
       Revenue driver. → Physician Referral Portal (planned).

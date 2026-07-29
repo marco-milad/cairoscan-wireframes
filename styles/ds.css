@@ -433,3 +433,18 @@ html[lang="en"]{--font-ar:'Poppins',-apple-system,'Segoe UI',sans-serif;}
 .stepper .st .ic svg{width:34px; height:34px; color:var(--ink-2);}
 .ico-in{display:inline-flex; align-items:center; justify-content:center; vertical-align:-.15em; margin-inline-end:6px; color:currentColor;}
 .ico-in svg{width:1.05em; height:1.05em;}
+
+/* feature list (AI section etc.) */
+.feat{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;}
+.feat li{display:flex; align-items:flex-start; gap:9px; font-size:14.5px; color:var(--ink-2);}
+.feat li .ico-in{margin:0; color:var(--action); flex:none; margin-top:2px;}
+
+/* price-estimate box (booking) */
+.est-box{display:flex; flex-wrap:wrap; gap:14px; background:var(--surface-2); border:1px solid var(--line);
+  border-radius:var(--radius-sm); padding:14px 16px; margin-top:14px;}
+.est-item{display:flex; align-items:center; gap:11px; flex:1; min-width:220px;}
+.est-item .ico-in{margin:0; color:var(--ink-2); flex:none;}
+.est-item .ico-in svg{width:20px; height:20px;}
+.est-item .est-lbl{font-size:11px; color:var(--muted); display:block; margin-bottom:1px;}
+.est-item b{font-size:15px;}
+.est-item .mini-link{font-size:13px; font-weight:600; color:var(--action); text-decoration:none;}
