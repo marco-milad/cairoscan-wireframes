@@ -424,3 +424,12 @@ html,body{overflow-x:hidden; max-width:100%;}
 
 /* English mode → Poppins everywhere (remap the Arabic family var) */
 html[lang="en"]{--font-ar:'Poppins',-apple-system,'Segoe UI',sans-serif;}
+
+/* —— SVG icons (replace emojis) —— */
+[data-icon] svg{display:block;}
+.icontile svg{width:24px; height:24px; color:var(--ink-2);}
+.medcard .ic svg{width:24px; height:24px; color:var(--ink-2);}
+.qa .ic svg{width:22px; height:22px; color:var(--ink-2);}
+.stepper .st .ic svg{width:34px; height:34px; color:var(--ink-2);}
+.ico-in{display:inline-flex; align-items:center; justify-content:center; vertical-align:-.15em; margin-inline-end:6px; color:currentColor;}
+.ico-in svg{width:1.05em; height:1.05em;}
